@@ -1,0 +1,11 @@
+Target,Selected model,MAE,RMSE,R2,Note
+cricket_runs,Ridge Regression,16.399,28.833,0.146,baseline-mean MAE 18.460
+cricket_wickets,Poisson GLM,0.827,1.097,0.034,baseline-mean MAE 0.818
+cricket_economy,Ridge Regression,0.745,0.940,0.452,baseline-mean MAE 1.014
+football_goals,Poisson GLM,0.230,0.393,0.116,baseline-mean MAE 0.265
+football_assists,Poisson GLM,0.174,0.310,0.006,baseline-mean MAE 0.178
+football_shots,Poisson GLM,1.053,1.395,0.290,baseline-mean MAE 1.276
+basketball_points,Random Forest,3.683,4.827,0.597,baseline-mean MAE 5.832
+basketball_rebounds,Ridge Regression,1.823,2.374,0.468,baseline-mean MAE 2.517
+basketball_assists,Ridge Regression,1.434,1.870,0.417,baseline-mean MAE 1.869
+cricket_p50,Logistic Regression,-,-,-,AUC 0.779; acc 0.906 vs majority 0.905

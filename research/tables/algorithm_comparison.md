@@ -1,0 +1,14 @@
+| Sport | Algorithm | Val. log-loss | Test log-loss | Test acc. | Test AUC |  |
+|---|---|---|---|---|---|---|
+| Cricket | Logistic regression | 0.5631 | 0.5645 | 0.696 | 0.774 | selected |
+| Cricket | Random forest | 0.5614 | 0.5574 | 0.705 | 0.782 |  |
+| Cricket | Gradient boosting | 0.5628 | 0.5561 | 0.703 | 0.781 |  |
+| Cricket | XGBoost | 0.5612 | 0.5531 | 0.707 | 0.784 |  |
+| Football | Logistic regression | 0.7540 | 0.7897 | 0.633 | 0.802 | selected |
+| Football | Random forest | 0.7515 | 0.7876 | 0.643 | 0.806 |  |
+| Football | Gradient boosting | 0.7760 | 0.8272 | 0.615 | 0.791 |  |
+| Football | XGBoost | 0.7598 | 0.7996 | 0.627 | 0.800 |  |
+| Basketball | Logistic regression | 0.4298 | 0.4162 | 0.787 | 0.882 | selected |
+| Basketball | Random forest | 0.4434 | 0.4195 | 0.787 | 0.884 |  |
+| Basketball | Gradient boosting | 0.4603 | 0.4272 | 0.783 | 0.877 |  |
+| Basketball | XGBoost | 0.4608 | 0.4234 | 0.786 | 0.880 |  |

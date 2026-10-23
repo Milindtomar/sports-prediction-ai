@@ -1,0 +1,4463 @@
+{
+ "sports": {
+  "cricket": {
+   "task": "win_probability",
+   "chosen": "logistic_regression",
+   "chosen_display": "Logistic Regression",
+   "classes": [
+    "Bowling side wins",
+    "Batting side wins"
+   ],
+   "features": [
+    "innings",
+    "runs",
+    "wickets_remaining",
+    "balls_remaining",
+    "crr",
+    "runs_required",
+    "rrr",
+    "rr_diff",
+    "recent_rr",
+    "recent_wickets",
+    "partnership_runs",
+    "resources",
+    "elo_diff",
+    "venue_par",
+    "phase"
+   ],
+   "comparison": {
+    "logistic_regression": {
+     "validation": {
+      "accuracy": 0.70297,
+      "precision": 0.70624,
+      "recall": 0.69274,
+      "f1": 0.69943,
+      "roc_auc": 0.77743,
+      "brier": 0.19197,
+      "log_loss": 0.56308,
+      "ece": 0.01702,
+      "reliability": [
+       {
+        "lo": 0.0,
+        "hi": 0.1,
+        "n": 1059,
+        "mean_pred": 0.05906,
+        "frac_pos": 0.06043
+       },
+       {
+        "lo": 0.1,
+        "hi": 0.2,
+        "n": 1570,
+        "mean_pred": 0.15363,
+        "frac_pos": 0.1879
+       },
+       {
+        "lo": 0.2,
+        "hi": 0.3,
+        "n": 1949,
+        "mean_pred": 0.25199,
+        "frac_pos": 0.28374
+       },
+       {
+        "lo": 0.3,
+        "hi": 0.4,
+        "n": 2340,
+        "mean_pred": 0.35126,
+        "frac_pos": 0.33974
+       },
+       {
+        "lo": 0.4,
+        "hi": 0.5,
+        "n": 2610,
+        "mean_pred": 0.45064,
+        "frac_pos": 0.44176
+       },
+       {
+        "lo": 0.5,
+        "hi": 0.6,
+        "n": 2497,
+        "mean_pred": 0.54987,
+        "frac_pos": 0.52583
+       },
+       {
+        "lo": 0.6,
+        "hi": 0.7,
+        "n": 2098,
+        "mean_pred": 0.64922,
+        "frac_pos": 0.66158
+       },
+       {
+        "lo": 0.7,
+        "hi": 0.8,
+        "n": 1931,
+        "mean_pred": 0.74935,
+        "frac_pos": 0.76696
+       },
+       {
+        "lo": 0.8,
+        "hi": 0.9,
+        "n": 1647,
+        "mean_pred": 0.84765,
+        "frac_pos": 0.83121
+       },
+       {
+        "lo": 0.9,
+        "hi": 1.0,
+        "n": 957,
+        "mean_pred": 0.94076,
+        "frac_pos": 0.9373
+       }
+      ],
+      "confusion_matrix": [
+       [
+        6668,
+        2682
+       ],
+       [
+        2860,
+        6448
+       ]
+      ]
+     },
+     "test": {
+      "accuracy": 0.69602,
+      "precision": 0.6958,
+      "recall": 0.69166,
+      "f1": 0.69372,
+      "roc_auc": 0.77405,
+      "brier": 0.19316,
+      "log_loss": 0.56449,
+      "ece": 0.0187,
+      "reliability": [
+       {
+        "lo": 0.0,
+        "hi": 0.1,
+        "n": 1139,
+        "mean_pred": 0.05586,
+        "frac_pos": 0.0755
+       },
+       {
+        "lo": 0.1,
+        "hi": 0.2,
+        "n": 1539,
+        "mean_pred": 0.15117,
+        "frac_pos": 0.17219
+       },
+       {
+        "lo": 0.2,
+        "hi": 0.3,
+        "n": 1852,
+        "mean_pred": 0.25231,
+        "frac_pos": 0.27754
+       },
+       {
+        "lo": 0.3,
+        "hi": 0.4,
+        "n": 2314,
+        "mean_pred": 0.35092,
+        "frac_pos": 0.36474
+       },
+       {
+        "lo": 0.4,
+        "hi": 0.5,
+        "n": 2525,
+        "mean_pred": 0.45084,
+        "frac_pos": 0.4503
+       },
+       {
+        "lo": 0.5,
+        "hi": 0.6,
+        "n": 2371,
+        "mean_pred": 0.54875,
+        "frac_pos": 0.52805
+       },
+       {
+        "lo": 0.6,
+        "hi": 0.7,
+        "n": 2111,
+        "mean_pred": 0.64955,
+        "frac_pos": 0.61866
+       },
+       {
+        "lo": 0.7,
+        "hi": 0.8,
+        "n": 2064,
+        "mean_pred": 0.74874,
+        "frac_pos": 0.73401
+       },
+       {
+        "lo": 0.8,
+        "hi": 0.9,
+        "n": 1705,
+        "mean_pred": 0.84909,
+        "frac_pos": 0.82757
+       },
+       {
+        "lo": 0.9,
+        "hi": 1.0,
+        "n": 924,
+        "mean_pred": 0.94093,
+        "frac_pos": 0.97403
+       }
+      ],
+      "confusion_matrix": [
+       [
+        6523,
+        2791
+       ],
+       [
+        2846,
+        6384
+       ]
+      ]
+     },
+     "train_seconds": 0.4
+    },
+    "random_forest": {
+     "validation": {
+      "accuracy": 0.70174,
+      "precision": 0.70287,
+      "recall": 0.69661,
+      "f1": 0.69972,
+      "roc_auc": 0.77886,
+      "brier": 0.19137,
+      "log_loss": 0.56137,
+      "ece": 0.01747,
+      "reliability": [
+       {
+        "lo": 0.0,
+        "hi": 0.1,
+        "n": 671,
+        "mean_pred": 0.06648,
+        "frac_pos": 0.03875
+       },
+       {
+        "lo": 0.1,
+        "hi": 0.2,
+        "n": 1622,
+        "mean_pred": 0.15324,
+        "frac_pos": 0.17386
+       },
+       {
+        "lo": 0.2,
+        "hi": 0.3,
+        "n": 1868,
+        "mean_pred": 0.252,
+        "frac_pos": 0.23394
+       },
+       {
+        "lo": 0.3,
+        "hi": 0.4,
+        "n": 2536,
+        "mean_pred": 0.35205,
+        "frac_pos": 0.33715
+       },
+       {
+        "lo": 0.4,
+        "hi": 0.5,
+        "n": 2736,
+        "mean_pred": 0.44907,
+        "frac_pos": 0.44737
+       },
+       {
+        "lo": 0.5,
+        "hi": 0.6,
+        "n": 2680,
+        "mean_pred": 0.55049,
+        "frac_pos": 0.53545
+       },
+       {
+        "lo": 0.6,
+        "hi": 0.7,
+        "n": 2635,
+        "mean_pred": 0.6489,
+        "frac_pos": 0.66869
+       },
+       {
+        "lo": 0.7,
+        "hi": 0.8,
+        "n": 1872,
+        "mean_pred": 0.74691,
+        "frac_pos": 0.76656
+       },
+       {
+        "lo": 0.8,
+        "hi": 0.9,
+        "n": 1368,
+        "mean_pred": 0.84568,
+        "frac_pos": 0.86915
+       },
+       {
+        "lo": 0.9,
+        "hi": 1.0,
+        "n": 670,
+        "mean_pred": 0.93534,
+        "frac_pos": 0.98955
+       }
+      ],
+      "confusion_matrix": [
+       [
+        6609,
+        2741
+       ],
+       [
+        2824,
+        6484
+       ]
+      ]
+     },
+     "test": {
+      "accuracy": 0.70486,
+      "precision": 0.70097,
+      "recall": 0.70986,
+      "f1": 0.70539,
+      "roc_auc": 0.78177,
+      "brier": 0.19003,
+      "log_loss": 0.55735,
+      "ece": 0.02298,
+      "reliability": [
+       {
+        "lo": 0.0,
+        "hi": 0.1,
+        "n": 792,
+        "mean_pred": 0.06788,
+        "frac_pos": 0.03535
+       },
+       {
+        "lo": 0.1,
+        "hi": 0.2,
+        "n": 1631,
+        "mean_pred": 0.15159,
+        "frac_pos": 0.17106
+       },
+       {
+        "lo": 0.2,
+        "hi": 0.3,
+        "n": 1816,
+        "mean_pred": 0.25087,
+        "frac_pos": 0.26267
+       },
+       {
+        "lo": 0.3,
+        "hi": 0.4,
+        "n": 2284,
+        "mean_pred": 0.35134,
+        "frac_pos": 0.34457
+       },
+       {
+        "lo": 0.4,
+        "hi": 0.5,
+        "n": 2674,
+        "mean_pred": 0.44968,
+        "frac_pos": 0.41399
+       },
+       {
+        "lo": 0.5,
+        "hi": 0.6,
+        "n": 2648,
+        "mean_pred": 0.55077,
+        "frac_pos": 0.52832
+       },
+       {
+        "lo": 0.6,
+        "hi": 0.7,
+        "n": 2535,
+        "mean_pred": 0.64892,
+        "frac_pos": 0.63905
+       },
+       {
+        "lo": 0.7,
+        "hi": 0.8,
+        "n": 2048,
+        "mean_pred": 0.74805,
+        "frac_pos": 0.77344
+       },
+       {
+        "lo": 0.8,
+        "hi": 0.9,
+        "n": 1425,
+        "mean_pred": 0.84415,
+        "frac_pos": 0.88912
+       },
+       {
+        "lo": 0.9,
+        "hi": 1.0,
+        "n": 691,
+        "mean_pred": 0.93521,
+        "frac_pos": 0.98698
+       }
+      ],
+      "confusion_matrix": [
+       [
+        6519,
+        2795
+       ],
+       [
+        2678,
+        6552
+       ]
+      ]
+     },
+     "train_seconds": 4.5
+    },
+    "gradient_boosting": {
+     "validation": {
+      "accuracy": 0.69713,
+      "precision": 0.69934,
+      "recall": 0.68919,
+      "f1": 0.69423,
+      "roc_auc": 0.77563,
+      "brier": 0.19257,
+      "log_loss": 0.56281,
+      "ece": 0.01895,
+      "reliability": [
+       {
+        "lo": 0.0,
+        "hi": 0.1,
+        "n": 1245,
+        "mean_pred": 0.05586,
+        "frac_pos": 0.07791
+       },
+       {
+        "lo": 0.1,
+        "hi": 0.2,
+        "n": 1492,
+        "mean_pred": 0.14999,
+        "frac_pos": 0.19236
+       },
+       {
+        "lo": 0.2,
+        "hi": 0.3,
+        "n": 1937,
+        "mean_pred": 0.25196,
+        "frac_pos": 0.27104
+       },
+       {
+        "lo": 0.3,
+        "hi": 0.4,
+        "n": 2331,
+        "mean_pred": 0.35185,
+        "frac_pos": 0.3595
+       },
+       {
+        "lo": 0.4,
+        "hi": 0.5,
+        "n": 2480,
+        "mean_pred": 0.44828,
+        "frac_pos": 0.4621
+       },
+       {
+        "lo": 0.5,
+        "hi": 0.6,
+        "n": 2379,
+        "mean_pred": 0.55114,
+        "frac_pos": 0.52921
+       },
+       {
+        "lo": 0.6,
+        "hi": 0.7,
+        "n": 2269,
+        "mean_pred": 0.64871,
+        "frac_pos": 0.63288
+       },
+       {
+        "lo": 0.7,
+        "hi": 0.8,
+        "n": 1895,
+        "mean_pred": 0.7477,
+        "frac_pos": 0.73509
+       },
+       {
+        "lo": 0.8,
+        "hi": 0.9,
+        "n": 1430,
+        "mean_pred": 0.85056,
+        "frac_pos": 0.81958
+       },
+       {
+        "lo": 0.9,
+        "hi": 1.0,
+        "n": 1200,
+        "mean_pred": 0.94793,
+        "frac_pos": 0.9625
+       }
+      ],
+      "confusion_matrix": [
+       [
+        6592,
+        2758
+       ],
+       [
+        2893,
+        6415
+       ]
+      ]
+     },
+     "test": {
+      "accuracy": 0.70276,
+      "precision": 0.69946,
+      "recall": 0.70628,
+      "f1": 0.70286,
+      "roc_auc": 0.78061,
+      "brier": 0.1903,
+      "log_loss": 0.55612,
+      "ece": 0.02093,
+      "reliability": [
+       {
+        "lo": 0.0,
+        "hi": 0.1,
+        "n": 1292,
+        "mean_pred": 0.05256,
+        "frac_pos": 0.06811
+       },
+       {
+        "lo": 0.1,
+        "hi": 0.2,
+        "n": 1493,
+        "mean_pred": 0.15127,
+        "frac_pos": 0.18218
+       },
+       {
+        "lo": 0.2,
+        "hi": 0.3,
+        "n": 1881,
+        "mean_pred": 0.25163,
+        "frac_pos": 0.28336
+       },
+       {
+        "lo": 0.3,
+        "hi": 0.4,
+        "n": 2194,
+        "mean_pred": 0.3525,
+        "frac_pos": 0.35825
+       },
+       {
+        "lo": 0.4,
+        "hi": 0.5,
+        "n": 2364,
+        "mean_pred": 0.44848,
+        "frac_pos": 0.43655
+       },
+       {
+        "lo": 0.5,
+        "hi": 0.6,
+        "n": 2387,
+        "mean_pred": 0.55103,
+        "frac_pos": 0.53624
+       },
+       {
+        "lo": 0.6,
+        "hi": 0.7,
+        "n": 2332,
+        "mean_pred": 0.64949,
+        "frac_pos": 0.62264
+       },
+       {
+        "lo": 0.7,
+        "hi": 0.8,
+        "n": 1899,
+        "mean_pred": 0.74864,
+        "frac_pos": 0.71722
+       },
+       {
+        "lo": 0.8,
+        "hi": 0.9,
+        "n": 1474,
+        "mean_pred": 0.84683,
+        "frac_pos": 0.82904
+       },
+       {
+        "lo": 0.9,
+        "hi": 1.0,
+        "n": 1228,
+        "mean_pred": 0.94909,
+        "frac_pos": 0.97964
+       }
+      ],
+      "confusion_matrix": [
+       [
+        6513,
+        2801
+       ],
+       [
+        2711,
+        6519
+       ]
+      ]
+     },
+     "train_seconds": 1.5
+    },
+    "xgboost": {
+     "validation": {
+      "accuracy": 0.69697,
+      "precision": 0.70015,
+      "recall": 0.68661,
+      "f1": 0.69332,
+      "roc_auc": 0.77658,
+      "brier": 0.19207,
+      "log_loss": 0.56116,
+      "ece": 0.01959,
+      "reliability": [
+       {
+        "lo": 0.0,
+        "hi": 0.1,
+        "n": 1209,
+        "mean_pred": 0.05694,
+        "frac_pos": 0.07113
+       },
+       {
+        "lo": 0.1,
+        "hi": 0.2,
+        "n": 1480,
+        "mean_pred": 0.14941,
+        "frac_pos": 0.18919
+       },
+       {
+        "lo": 0.2,
+        "hi": 0.3,
+        "n": 2007,
+        "mean_pred": 0.25178,
+        "frac_pos": 0.27205
+       },
+       {
+        "lo": 0.3,
+        "hi": 0.4,
+        "n": 2348,
+        "mean_pred": 0.35214,
+        "frac_pos": 0.36201
+       },
+       {
+        "lo": 0.4,
+        "hi": 0.5,
+        "n": 2486,
+        "mean_pred": 0.44899,
+        "frac_pos": 0.4646
+       },
+       {
+        "lo": 0.5,
+        "hi": 0.6,
+        "n": 2500,
+        "mean_pred": 0.55093,
+        "frac_pos": 0.5244
+       },
+       {
+        "lo": 0.6,
+        "hi": 0.7,
+        "n": 2117,
+        "mean_pred": 0.6489,
+        "frac_pos": 0.63533
+       },
+       {
+        "lo": 0.7,
+        "hi": 0.8,
+        "n": 1786,
+        "mean_pred": 0.74753,
+        "frac_pos": 0.74692
+       },
+       {
+        "lo": 0.8,
+        "hi": 0.9,
+        "n": 1532,
+        "mean_pred": 0.85001,
+        "frac_pos": 0.81005
+       },
+       {
+        "lo": 0.9,
+        "hi": 1.0,
+        "n": 1193,
+        "mean_pred": 0.94762,
+        "frac_pos": 0.97234
+       }
+      ],
+      "confusion_matrix": [
+       [
+        6613,
+        2737
+       ],
+       [
+        2917,
+        6391
+       ]
+      ]
+     },
+     "test": {
+      "accuracy": 0.70708,
+      "precision": 0.70534,
+      "recall": 0.70672,
+      "f1": 0.70603,
+      "roc_auc": 0.78355,
+      "brier": 0.18907,
+      "log_loss": 0.55311,
+      "ece": 0.01886,
+      "reliability": [
+       {
+        "lo": 0.0,
+        "hi": 0.1,
+        "n": 1276,
+        "mean_pred": 0.05509,
+        "frac_pos": 0.05329
+       },
+       {
+        "lo": 0.1,
+        "hi": 0.2,
+        "n": 1418,
+        "mean_pred": 0.15056,
+        "frac_pos": 0.20592
+       },
+       {
+        "lo": 0.2,
+        "hi": 0.3,
+        "n": 1905,
+        "mean_pred": 0.2516,
+        "frac_pos": 0.25669
+       },
+       {
+        "lo": 0.3,
+        "hi": 0.4,
+        "n": 2157,
+        "mean_pred": 0.35261,
+        "frac_pos": 0.36254
+       },
+       {
+        "lo": 0.4,
+        "hi": 0.5,
+        "n": 2540,
+        "mean_pred": 0.44869,
+        "frac_pos": 0.42362
+       },
+       {
+        "lo": 0.5,
+        "hi": 0.6,
+        "n": 2418,
+        "mean_pred": 0.55015,
+        "frac_pos": 0.54301
+       },
+       {
+        "lo": 0.6,
+        "hi": 0.7,
+        "n": 2203,
+        "mean_pred": 0.64876,
+        "frac_pos": 0.63368
+       },
+       {
+        "lo": 0.7,
+        "hi": 0.8,
+        "n": 1850,
+        "mean_pred": 0.74957,
+        "frac_pos": 0.71189
+       },
+       {
+        "lo": 0.8,
+        "hi": 0.9,
+        "n": 1558,
+        "mean_pred": 0.84696,
+        "frac_pos": 0.83633
+       },
+       {
+        "lo": 0.9,
+        "hi": 1.0,
+        "n": 1219,
+        "mean_pred": 0.94879,
+        "frac_pos": 0.97949
+       }
+      ],
+      "confusion_matrix": [
+       [
+        6589,
+        2725
+       ],
+       [
+        2707,
+        6523
+       ]
+      ]
+     },
+     "train_seconds": 1.0
+    }
+   },
+   "selection_rule": "lowest validation log-loss; simplest model within 1% of the best",
+   "calibrated": false,
+   "calibration_check": {
+    "raw_val_ll": 0.57144,
+    "calibrated_val_ll": 0.57153
+   },
+   "final": {
+    "validation": {
+     "accuracy": 0.70297,
+     "precision": 0.70624,
+     "recall": 0.69274,
+     "f1": 0.69943,
+     "roc_auc": 0.77743,
+     "brier": 0.19197,
+     "log_loss": 0.56308,
+     "ece": 0.01702,
+     "reliability": [
+      {
+       "lo": 0.0,
+       "hi": 0.1,
+       "n": 1059,
+       "mean_pred": 0.05906,
+       "frac_pos": 0.06043
+      },
+      {
+       "lo": 0.1,
+       "hi": 0.2,
+       "n": 1570,
+       "mean_pred": 0.15363,
+       "frac_pos": 0.1879
+      },
+      {
+       "lo": 0.2,
+       "hi": 0.3,
+       "n": 1949,
+       "mean_pred": 0.25199,
+       "frac_pos": 0.28374
+      },
+      {
+       "lo": 0.3,
+       "hi": 0.4,
+       "n": 2340,
+       "mean_pred": 0.35126,
+       "frac_pos": 0.33974
+      },
+      {
+       "lo": 0.4,
+       "hi": 0.5,
+       "n": 2610,
+       "mean_pred": 0.45064,
+       "frac_pos": 0.44176
+      },
+      {
+       "lo": 0.5,
+       "hi": 0.6,
+       "n": 2497,
+       "mean_pred": 0.54987,
+       "frac_pos": 0.52583
+      },
+      {
+       "lo": 0.6,
+       "hi": 0.7,
+       "n": 2098,
+       "mean_pred": 0.64922,
+       "frac_pos": 0.66158
+      },
+      {
+       "lo": 0.7,
+       "hi": 0.8,
+       "n": 1931,
+       "mean_pred": 0.74935,
+       "frac_pos": 0.76696
+      },
+      {
+       "lo": 0.8,
+       "hi": 0.9,
+       "n": 1647,
+       "mean_pred": 0.84765,
+       "frac_pos": 0.83121
+      },
+      {
+       "lo": 0.9,
+       "hi": 1.0,
+       "n": 957,
+       "mean_pred": 0.94076,
+       "frac_pos": 0.9373
+      }
+     ],
+     "confusion_matrix": [
+      [
+       6668,
+       2682
+      ],
+      [
+       2860,
+       6448
+      ]
+     ]
+    },
+    "test": {
+     "accuracy": 0.69602,
+     "precision": 0.6958,
+     "recall": 0.69166,
+     "f1": 0.69372,
+     "roc_auc": 0.77405,
+     "brier": 0.19316,
+     "log_loss": 0.56449,
+     "ece": 0.0187,
+     "reliability": [
+      {
+       "lo": 0.0,
+       "hi": 0.1,
+       "n": 1139,
+       "mean_pred": 0.05586,
+       "frac_pos": 0.0755
+      },
+      {
+       "lo": 0.1,
+       "hi": 0.2,
+       "n": 1539,
+       "mean_pred": 0.15117,
+       "frac_pos": 0.17219
+      },
+      {
+       "lo": 0.2,
+       "hi": 0.3,
+       "n": 1852,
+       "mean_pred": 0.25231,
+       "frac_pos": 0.27754
+      },
+      {
+       "lo": 0.3,
+       "hi": 0.4,
+       "n": 2314,
+       "mean_pred": 0.35092,
+       "frac_pos": 0.36474
+      },
+      {
+       "lo": 0.4,
+       "hi": 0.5,
+       "n": 2525,
+       "mean_pred": 0.45084,
+       "frac_pos": 0.4503
+      },
+      {
+       "lo": 0.5,
+       "hi": 0.6,
+       "n": 2371,
+       "mean_pred": 0.54875,
+       "frac_pos": 0.52805
+      },
+      {
+       "lo": 0.6,
+       "hi": 0.7,
+       "n": 2111,
+       "mean_pred": 0.64955,
+       "frac_pos": 0.61866
+      },
+      {
+       "lo": 0.7,
+       "hi": 0.8,
+       "n": 2064,
+       "mean_pred": 0.74874,
+       "frac_pos": 0.73401
+      },
+      {
+       "lo": 0.8,
+       "hi": 0.9,
+       "n": 1705,
+       "mean_pred": 0.84909,
+       "frac_pos": 0.82757
+      },
+      {
+       "lo": 0.9,
+       "hi": 1.0,
+       "n": 924,
+       "mean_pred": 0.94093,
+       "frac_pos": 0.97403
+      }
+     ],
+     "confusion_matrix": [
+      [
+       6523,
+       2791
+      ],
+      [
+       2846,
+       6384
+      ]
+     ]
+    }
+   },
+   "baseline": {
+    "majority_accuracy": 0.50226,
+    "prior_log_loss": 0.69314
+   },
+   "feature_importance": {
+    "runs_required": 0.96178,
+    "resources": 0.15299,
+    "balls_remaining": 0.10971,
+    "runs": 0.05239,
+    "venue_par": 0.03353,
+    "elo_diff": 0.0276,
+    "innings": 0.01587,
+    "rrr": 0.0054,
+    "rr_diff": 0.0028,
+    "wickets_remaining": 0.0005,
+    "crr": 0.00026,
+    "recent_wickets": 0.00022,
+    "partnership_runs": 0.00011,
+    "recent_rr": 0.0,
+    "phase": -0.00018
+   },
+   "split": {
+    "rows": {
+     "train": 87019,
+     "validation": 18658,
+     "test": 18544
+    },
+    "matches": {
+     "train": 2240,
+     "validation": 480,
+     "test": 480
+    },
+    "scheme": "chronological, match-grouped 70/15/15"
+   },
+   "bootstrap_members": 12,
+   "dataset": {
+    "rows": 124221,
+    "matches": 3200,
+    "class_balance": {
+     "0": 0.5019,
+     "1": 0.4981
+    },
+    "n_features": 15,
+    "data_hash": "0bd0f72ccbe062b2",
+    "generator": "ball-by-ball T20 simulator",
+    "target": "current batting side wins the match",
+    "snapshot": "after every completed over (both innings)"
+   }
+  },
+  "football": {
+   "task": "win_probability",
+   "chosen": "logistic_regression",
+   "chosen_display": "Logistic Regression",
+   "classes": [
+    "Home win",
+    "Draw",
+    "Away win"
+   ],
+   "features": [
+    "minute",
+    "minutes_remaining",
+    "goal_diff",
+    "home_goals",
+    "away_goals",
+    "lead_security",
+    "shots_diff",
+    "sot_diff",
+    "xg_diff",
+    "home_possession",
+    "corners_diff",
+    "fouls_diff",
+    "yellow_diff",
+    "red_diff",
+    "pass_acc_diff",
+    "elo_diff",
+    "lineup_diff"
+   ],
+   "comparison": {
+    "logistic_regression": {
+     "validation": {
+      "accuracy": 0.66111,
+      "precision": 0.62797,
+      "recall": 0.61762,
+      "f1": 0.6166,
+      "roc_auc": 0.82115,
+      "brier": 0.44073,
+      "log_loss": 0.75397,
+      "ece": 0.02921,
+      "reliability": [
+       {
+        "lo": 0.3,
+        "hi": 0.4,
+        "n": 672,
+        "mean_pred": 0.37903,
+        "frac_pos": 0.38393
+       },
+       {
+        "lo": 0.4,
+        "hi": 0.5,
+        "n": 2171,
+        "mean_pred": 0.45019,
+        "frac_pos": 0.44311
+       },
+       {
+        "lo": 0.5,
+        "hi": 0.6,
+        "n": 1604,
+        "mean_pred": 0.54578,
+        "frac_pos": 0.59414
+       },
+       {
+        "lo": 0.6,
+        "hi": 0.7,
+        "n": 1106,
+        "mean_pred": 0.64882,
+        "frac_pos": 0.71519
+       },
+       {
+        "lo": 0.7,
+        "hi": 0.8,
+        "n": 862,
+        "mean_pred": 0.7485,
+        "frac_pos": 0.73782
+       },
+       {
+        "lo": 0.8,
+        "hi": 0.9,
+        "n": 881,
+        "mean_pred": 0.84729,
+        "frac_pos": 0.90806
+       },
+       {
+        "lo": 0.9,
+        "hi": 1.0,
+        "n": 1344,
+        "mean_pred": 0.9613,
+        "frac_pos": 0.97619
+       }
+      ],
+      "confusion_matrix": [
+       [
+        3311,
+        416,
+        323
+       ],
+       [
+        833,
+        806,
+        575
+       ],
+       [
+        474,
+        307,
+        1595
+       ]
+      ]
+     },
+     "test": {
+      "accuracy": 0.63264,
+      "precision": 0.60253,
+      "recall": 0.59562,
+      "f1": 0.59348,
+      "roc_auc": 0.80162,
+      "brier": 0.46484,
+      "log_loss": 0.78973,
+      "ece": 0.01753,
+      "reliability": [
+       {
+        "lo": 0.3,
+        "hi": 0.4,
+        "n": 683,
+        "mean_pred": 0.37841,
+        "frac_pos": 0.34993
+       },
+       {
+        "lo": 0.4,
+        "hi": 0.5,
+        "n": 2133,
+        "mean_pred": 0.4493,
+        "frac_pos": 0.42522
+       },
+       {
+        "lo": 0.5,
+        "hi": 0.6,
+        "n": 1619,
+        "mean_pred": 0.54799,
+        "frac_pos": 0.54602
+       },
+       {
+        "lo": 0.6,
+        "hi": 0.7,
+        "n": 1218,
+        "mean_pred": 0.64562,
+        "frac_pos": 0.67488
+       },
+       {
+        "lo": 0.7,
+        "hi": 0.8,
+        "n": 940,
+        "mean_pred": 0.75118,
+        "frac_pos": 0.77872
+       },
+       {
+        "lo": 0.8,
+        "hi": 0.9,
+        "n": 739,
+        "mean_pred": 0.84519,
+        "frac_pos": 0.85386
+       },
+       {
+        "lo": 0.9,
+        "hi": 1.0,
+        "n": 1308,
+        "mean_pred": 0.96367,
+        "frac_pos": 0.95642
+       }
+      ],
+      "confusion_matrix": [
+       [
+        2926,
+        432,
+        314
+       ],
+       [
+        905,
+        747,
+        580
+       ],
+       [
+        531,
+        412,
+        1793
+       ]
+      ]
+     },
+     "train_seconds": 0.5
+    },
+    "random_forest": {
+     "validation": {
+      "accuracy": 0.6647,
+      "precision": 0.63381,
+      "recall": 0.62067,
+      "f1": 0.62047,
+      "roc_auc": 0.82279,
+      "brier": 0.43778,
+      "log_loss": 0.75154,
+      "ece": 0.02661,
+      "reliability": [
+       {
+        "lo": 0.3,
+        "hi": 0.4,
+        "n": 755,
+        "mean_pred": 0.37776,
+        "frac_pos": 0.38278
+       },
+       {
+        "lo": 0.4,
+        "hi": 0.5,
+        "n": 2220,
+        "mean_pred": 0.44784,
+        "frac_pos": 0.47207
+       },
+       {
+        "lo": 0.5,
+        "hi": 0.6,
+        "n": 1281,
+        "mean_pred": 0.54434,
+        "frac_pos": 0.54957
+       },
+       {
+        "lo": 0.6,
+        "hi": 0.7,
+        "n": 1031,
+        "mean_pred": 0.65246,
+        "frac_pos": 0.69641
+       },
+       {
+        "lo": 0.7,
+        "hi": 0.8,
+        "n": 1132,
+        "mean_pred": 0.74861,
+        "frac_pos": 0.78799
+       },
+       {
+        "lo": 0.8,
+        "hi": 0.9,
+        "n": 1022,
+        "mean_pred": 0.84711,
+        "frac_pos": 0.88748
+       },
+       {
+        "lo": 0.9,
+        "hi": 1.0,
+        "n": 1199,
+        "mean_pred": 0.95959,
+        "frac_pos": 0.98832
+       }
+      ],
+      "confusion_matrix": [
+       [
+        3337,
+        387,
+        326
+       ],
+       [
+        813,
+        826,
+        575
+       ],
+       [
+        498,
+        298,
+        1580
+       ]
+      ]
+     },
+     "test": {
+      "accuracy": 0.64259,
+      "precision": 0.61666,
+      "recall": 0.60673,
+      "f1": 0.60587,
+      "roc_auc": 0.80628,
+      "brier": 0.4613,
+      "log_loss": 0.78757,
+      "ece": 0.00865,
+      "reliability": [
+       {
+        "lo": 0.3,
+        "hi": 0.4,
+        "n": 801,
+        "mean_pred": 0.37675,
+        "frac_pos": 0.37828
+       },
+       {
+        "lo": 0.4,
+        "hi": 0.5,
+        "n": 2199,
+        "mean_pred": 0.44819,
+        "frac_pos": 0.45293
+       },
+       {
+        "lo": 0.5,
+        "hi": 0.6,
+        "n": 1269,
+        "mean_pred": 0.54536,
+        "frac_pos": 0.54452
+       },
+       {
+        "lo": 0.6,
+        "hi": 0.7,
+        "n": 1119,
+        "mean_pred": 0.65028,
+        "frac_pos": 0.66756
+       },
+       {
+        "lo": 0.7,
+        "hi": 0.8,
+        "n": 1200,
+        "mean_pred": 0.74743,
+        "frac_pos": 0.78167
+       },
+       {
+        "lo": 0.8,
+        "hi": 0.9,
+        "n": 860,
+        "mean_pred": 0.84705,
+        "frac_pos": 0.84884
+       },
+       {
+        "lo": 0.9,
+        "hi": 1.0,
+        "n": 1192,
+        "mean_pred": 0.96229,
+        "frac_pos": 0.96225
+       }
+      ],
+      "confusion_matrix": [
+       [
+        2950,
+        400,
+        322
+       ],
+       [
+        898,
+        797,
+        537
+       ],
+       [
+        529,
+        402,
+        1805
+       ]
+      ]
+     },
+     "train_seconds": 1.9
+    },
+    "gradient_boosting": {
+     "validation": {
+      "accuracy": 0.65231,
+      "precision": 0.61534,
+      "recall": 0.61263,
+      "f1": 0.6099,
+      "roc_auc": 0.81074,
+      "brier": 0.45294,
+      "log_loss": 0.77601,
+      "ece": 0.01285,
+      "reliability": [
+       {
+        "lo": 0.3,
+        "hi": 0.4,
+        "n": 531,
+        "mean_pred": 0.37901,
+        "frac_pos": 0.4162
+       },
+       {
+        "lo": 0.4,
+        "hi": 0.5,
+        "n": 2008,
+        "mean_pred": 0.45212,
+        "frac_pos": 0.44721
+       },
+       {
+        "lo": 0.5,
+        "hi": 0.6,
+        "n": 1544,
+        "mean_pred": 0.54657,
+        "frac_pos": 0.51166
+       },
+       {
+        "lo": 0.6,
+        "hi": 0.7,
+        "n": 1119,
+        "mean_pred": 0.64783,
+        "frac_pos": 0.64969
+       },
+       {
+        "lo": 0.7,
+        "hi": 0.8,
+        "n": 888,
+        "mean_pred": 0.74943,
+        "frac_pos": 0.75338
+       },
+       {
+        "lo": 0.8,
+        "hi": 0.9,
+        "n": 941,
+        "mean_pred": 0.85012,
+        "frac_pos": 0.83316
+       },
+       {
+        "lo": 0.9,
+        "hi": 1.0,
+        "n": 1609,
+        "mean_pred": 0.96515,
+        "frac_pos": 0.96147
+       }
+      ],
+      "confusion_matrix": [
+       [
+        3216,
+        458,
+        376
+       ],
+       [
+        763,
+        821,
+        630
+       ],
+       [
+        415,
+        362,
+        1599
+       ]
+      ]
+     },
+     "test": {
+      "accuracy": 0.6147,
+      "precision": 0.58625,
+      "recall": 0.58272,
+      "f1": 0.58231,
+      "roc_auc": 0.79055,
+      "brier": 0.48187,
+      "log_loss": 0.8272,
+      "ece": 0.04253,
+      "reliability": [
+       {
+        "lo": 0.3,
+        "hi": 0.4,
+        "n": 515,
+        "mean_pred": 0.37698,
+        "frac_pos": 0.33398
+       },
+       {
+        "lo": 0.4,
+        "hi": 0.5,
+        "n": 2001,
+        "mean_pred": 0.45056,
+        "frac_pos": 0.4003
+       },
+       {
+        "lo": 0.5,
+        "hi": 0.6,
+        "n": 1558,
+        "mean_pred": 0.54657,
+        "frac_pos": 0.47754
+       },
+       {
+        "lo": 0.6,
+        "hi": 0.7,
+        "n": 1107,
+        "mean_pred": 0.64859,
+        "frac_pos": 0.61156
+       },
+       {
+        "lo": 0.7,
+        "hi": 0.8,
+        "n": 1027,
+        "mean_pred": 0.7489,
+        "frac_pos": 0.73223
+       },
+       {
+        "lo": 0.8,
+        "hi": 0.9,
+        "n": 897,
+        "mean_pred": 0.84753,
+        "frac_pos": 0.80268
+       },
+       {
+        "lo": 0.9,
+        "hi": 1.0,
+        "n": 1535,
+        "mean_pred": 0.96666,
+        "frac_pos": 0.94137
+       }
+      ],
+      "confusion_matrix": [
+       [
+        2789,
+        539,
+        344
+       ],
+       [
+        838,
+        810,
+        584
+       ],
+       [
+        528,
+        496,
+        1712
+       ]
+      ]
+     },
+     "train_seconds": 2.1
+    },
+    "xgboost": {
+     "validation": {
+      "accuracy": 0.65938,
+      "precision": 0.62648,
+      "recall": 0.61891,
+      "f1": 0.61745,
+      "roc_auc": 0.81816,
+      "brier": 0.44382,
+      "log_loss": 0.75976,
+      "ece": 0.02321,
+      "reliability": [
+       {
+        "lo": 0.3,
+        "hi": 0.4,
+        "n": 650,
+        "mean_pred": 0.37671,
+        "frac_pos": 0.36308
+       },
+       {
+        "lo": 0.4,
+        "hi": 0.5,
+        "n": 2143,
+        "mean_pred": 0.45081,
+        "frac_pos": 0.4811
+       },
+       {
+        "lo": 0.5,
+        "hi": 0.6,
+        "n": 1490,
+        "mean_pred": 0.54567,
+        "frac_pos": 0.52148
+       },
+       {
+        "lo": 0.6,
+        "hi": 0.7,
+        "n": 961,
+        "mean_pred": 0.64748,
+        "frac_pos": 0.68054
+       },
+       {
+        "lo": 0.7,
+        "hi": 0.8,
+        "n": 1002,
+        "mean_pred": 0.75012,
+        "frac_pos": 0.78443
+       },
+       {
+        "lo": 0.8,
+        "hi": 0.9,
+        "n": 913,
+        "mean_pred": 0.84633,
+        "frac_pos": 0.84009
+       },
+       {
+        "lo": 0.9,
+        "hi": 1.0,
+        "n": 1481,
+        "mean_pred": 0.96365,
+        "frac_pos": 0.97637
+       }
+      ],
+      "confusion_matrix": [
+       [
+        3258,
+        426,
+        366
+       ],
+       [
+        782,
+        837,
+        595
+       ],
+       [
+        458,
+        316,
+        1602
+       ]
+      ]
+     },
+     "test": {
+      "accuracy": 0.62731,
+      "precision": 0.59889,
+      "recall": 0.59279,
+      "f1": 0.59128,
+      "roc_auc": 0.79998,
+      "brier": 0.46809,
+      "log_loss": 0.79958,
+      "ece": 0.02021,
+      "reliability": [
+       {
+        "lo": 0.3,
+        "hi": 0.4,
+        "n": 629,
+        "mean_pred": 0.37804,
+        "frac_pos": 0.32273
+       },
+       {
+        "lo": 0.4,
+        "hi": 0.5,
+        "n": 2169,
+        "mean_pred": 0.45037,
+        "frac_pos": 0.41586
+       },
+       {
+        "lo": 0.5,
+        "hi": 0.6,
+        "n": 1426,
+        "mean_pred": 0.54565,
+        "frac_pos": 0.53015
+       },
+       {
+        "lo": 0.6,
+        "hi": 0.7,
+        "n": 1048,
+        "mean_pred": 0.64927,
+        "frac_pos": 0.63836
+       },
+       {
+        "lo": 0.7,
+        "hi": 0.8,
+        "n": 1031,
+        "mean_pred": 0.74933,
+        "frac_pos": 0.74879
+       },
+       {
+        "lo": 0.8,
+        "hi": 0.9,
+        "n": 873,
+        "mean_pred": 0.84256,
+        "frac_pos": 0.83505
+       },
+       {
+        "lo": 0.9,
+        "hi": 1.0,
+        "n": 1464,
+        "mean_pred": 0.9654,
+        "frac_pos": 0.94877
+       }
+      ],
+      "confusion_matrix": [
+       [
+        2864,
+        451,
+        357
+       ],
+       [
+        867,
+        778,
+        587
+       ],
+       [
+        544,
+        414,
+        1778
+       ]
+      ]
+     },
+     "train_seconds": 1.4
+    }
+   },
+   "selection_rule": "lowest validation log-loss; simplest model within 1% of the best",
+   "calibrated": false,
+   "calibration_check": {
+    "raw_val_ll": 0.76794,
+    "calibrated_val_ll": 0.79482
+   },
+   "final": {
+    "validation": {
+     "accuracy": 0.66111,
+     "precision": 0.62797,
+     "recall": 0.61762,
+     "f1": 0.6166,
+     "roc_auc": 0.82115,
+     "brier": 0.44073,
+     "log_loss": 0.75397,
+     "ece": 0.02921,
+     "reliability": [
+      {
+       "lo": 0.3,
+       "hi": 0.4,
+       "n": 672,
+       "mean_pred": 0.37903,
+       "frac_pos": 0.38393
+      },
+      {
+       "lo": 0.4,
+       "hi": 0.5,
+       "n": 2171,
+       "mean_pred": 0.45019,
+       "frac_pos": 0.44311
+      },
+      {
+       "lo": 0.5,
+       "hi": 0.6,
+       "n": 1604,
+       "mean_pred": 0.54578,
+       "frac_pos": 0.59414
+      },
+      {
+       "lo": 0.6,
+       "hi": 0.7,
+       "n": 1106,
+       "mean_pred": 0.64882,
+       "frac_pos": 0.71519
+      },
+      {
+       "lo": 0.7,
+       "hi": 0.8,
+       "n": 862,
+       "mean_pred": 0.7485,
+       "frac_pos": 0.73782
+      },
+      {
+       "lo": 0.8,
+       "hi": 0.9,
+       "n": 881,
+       "mean_pred": 0.84729,
+       "frac_pos": 0.90806
+      },
+      {
+       "lo": 0.9,
+       "hi": 1.0,
+       "n": 1344,
+       "mean_pred": 0.9613,
+       "frac_pos": 0.97619
+      }
+     ],
+     "confusion_matrix": [
+      [
+       3311,
+       416,
+       323
+      ],
+      [
+       833,
+       806,
+       575
+      ],
+      [
+       474,
+       307,
+       1595
+      ]
+     ]
+    },
+    "test": {
+     "accuracy": 0.63264,
+     "precision": 0.60253,
+     "recall": 0.59562,
+     "f1": 0.59348,
+     "roc_auc": 0.80162,
+     "brier": 0.46484,
+     "log_loss": 0.78973,
+     "ece": 0.01753,
+     "reliability": [
+      {
+       "lo": 0.3,
+       "hi": 0.4,
+       "n": 683,
+       "mean_pred": 0.37841,
+       "frac_pos": 0.34993
+      },
+      {
+       "lo": 0.4,
+       "hi": 0.5,
+       "n": 2133,
+       "mean_pred": 0.4493,
+       "frac_pos": 0.42522
+      },
+      {
+       "lo": 0.5,
+       "hi": 0.6,
+       "n": 1619,
+       "mean_pred": 0.54799,
+       "frac_pos": 0.54602
+      },
+      {
+       "lo": 0.6,
+       "hi": 0.7,
+       "n": 1218,
+       "mean_pred": 0.64562,
+       "frac_pos": 0.67488
+      },
+      {
+       "lo": 0.7,
+       "hi": 0.8,
+       "n": 940,
+       "mean_pred": 0.75118,
+       "frac_pos": 0.77872
+      },
+      {
+       "lo": 0.8,
+       "hi": 0.9,
+       "n": 739,
+       "mean_pred": 0.84519,
+       "frac_pos": 0.85386
+      },
+      {
+       "lo": 0.9,
+       "hi": 1.0,
+       "n": 1308,
+       "mean_pred": 0.96367,
+       "frac_pos": 0.95642
+      }
+     ],
+     "confusion_matrix": [
+      [
+       2926,
+       432,
+       314
+      ],
+      [
+       905,
+       747,
+       580
+      ],
+      [
+       531,
+       412,
+       1793
+      ]
+     ]
+    }
+   },
+   "baseline": {
+    "majority_accuracy": 0.425,
+    "prior_log_loss": 1.0787
+   },
+   "feature_importance": {
+    "lead_security": 1.22417,
+    "minute": 0.01111,
+    "minutes_remaining": 0.01028,
+    "goal_diff": 0.00909,
+    "elo_diff": 0.00764,
+    "pass_acc_diff": 0.00591,
+    "home_possession": 0.00516,
+    "home_goals": 0.00436,
+    "red_diff": 0.00346,
+    "sot_diff": 0.0031,
+    "away_goals": 0.00275,
+    "lineup_diff": 0.00267,
+    "xg_diff": 0.00121,
+    "corners_diff": 0.00119,
+    "yellow_diff": -0.00016,
+    "fouls_diff": -0.00034,
+    "shots_diff": -0.00098
+   },
+   "split": {
+    "rows": {
+     "train": 40320,
+     "validation": 8640,
+     "test": 8640
+    },
+    "matches": {
+     "train": 2240,
+     "validation": 480,
+     "test": 480
+    },
+    "scheme": "chronological, match-grouped 70/15/15"
+   },
+   "bootstrap_members": 12,
+   "dataset": {
+    "rows": 57600,
+    "matches": 3200,
+    "class_balance": {
+     "0": 0.4422,
+     "1": 0.2634,
+     "2": 0.2944
+    },
+    "n_features": 17,
+    "data_hash": "29a382a8c17befec",
+    "generator": "minute-by-minute shot/xG process",
+    "target": "full-time result (H/D/A)",
+    "snapshot": "every 5 minutes, minute 0-85"
+   }
+  },
+  "basketball": {
+   "task": "win_probability",
+   "chosen": "logistic_regression",
+   "chosen_display": "Logistic Regression",
+   "classes": [
+    "Away win",
+    "Home win"
+   ],
+   "features": [
+    "time_remaining",
+    "quarter",
+    "score_diff",
+    "lead_security",
+    "fg_pct_diff",
+    "tp_pct_diff",
+    "ft_pct_diff",
+    "reb_diff",
+    "ast_diff",
+    "tov_diff",
+    "foul_diff",
+    "possession",
+    "eff_diff",
+    "elo_diff",
+    "lineup_diff"
+   ],
+   "comparison": {
+    "logistic_regression": {
+     "validation": {
+      "accuracy": 0.78527,
+      "precision": 0.80376,
+      "recall": 0.79122,
+      "f1": 0.79744,
+      "roc_auc": 0.87607,
+      "brier": 0.14349,
+      "log_loss": 0.42982,
+      "ece": 0.01821,
+      "reliability": [
+       {
+        "lo": 0.0,
+        "hi": 0.1,
+        "n": 1407,
+        "mean_pred": 0.02781,
+        "frac_pos": 0.02843
+       },
+       {
+        "lo": 0.1,
+        "hi": 0.2,
+        "n": 664,
+        "mean_pred": 0.14821,
+        "frac_pos": 0.1747
+       },
+       {
+        "lo": 0.2,
+        "hi": 0.3,
+        "n": 704,
+        "mean_pred": 0.25244,
+        "frac_pos": 0.31534
+       },
+       {
+        "lo": 0.3,
+        "hi": 0.4,
+        "n": 707,
+        "mean_pred": 0.34876,
+        "frac_pos": 0.38614
+       },
+       {
+        "lo": 0.4,
+        "hi": 0.5,
+        "n": 786,
+        "mean_pred": 0.44948,
+        "frac_pos": 0.44911
+       },
+       {
+        "lo": 0.5,
+        "hi": 0.6,
+        "n": 779,
+        "mean_pred": 0.5489,
+        "frac_pos": 0.58023
+       },
+       {
+        "lo": 0.6,
+        "hi": 0.7,
+        "n": 701,
+        "mean_pred": 0.64853,
+        "frac_pos": 0.68331
+       },
+       {
+        "lo": 0.7,
+        "hi": 0.8,
+        "n": 762,
+        "mean_pred": 0.75044,
+        "frac_pos": 0.72835
+       },
+       {
+        "lo": 0.8,
+        "hi": 0.9,
+        "n": 757,
+        "mean_pred": 0.85305,
+        "frac_pos": 0.84544
+       },
+       {
+        "lo": 0.9,
+        "hi": 1.0,
+        "n": 1735,
+        "mean_pred": 0.96949,
+        "frac_pos": 0.96772
+       }
+      ],
+      "confusion_matrix": [
+       [
+        3264,
+        929
+       ],
+       [
+        1004,
+        3805
+       ]
+      ]
+     },
+     "test": {
+      "accuracy": 0.78676,
+      "precision": 0.81223,
+      "recall": 0.80675,
+      "f1": 0.80948,
+      "roc_auc": 0.8825,
+      "brier": 0.13899,
+      "log_loss": 0.41618,
+      "ece": 0.02142,
+      "reliability": [
+       {
+        "lo": 0.0,
+        "hi": 0.1,
+        "n": 1274,
+        "mean_pred": 0.02988,
+        "frac_pos": 0.03532
+       },
+       {
+        "lo": 0.1,
+        "hi": 0.2,
+        "n": 597,
+        "mean_pred": 0.14762,
+        "frac_pos": 0.18258
+       },
+       {
+        "lo": 0.2,
+        "hi": 0.3,
+        "n": 619,
+        "mean_pred": 0.25238,
+        "frac_pos": 0.27625
+       },
+       {
+        "lo": 0.3,
+        "hi": 0.4,
+        "n": 699,
+        "mean_pred": 0.35209,
+        "frac_pos": 0.3691
+       },
+       {
+        "lo": 0.4,
+        "hi": 0.5,
+        "n": 781,
+        "mean_pred": 0.45004,
+        "frac_pos": 0.50064
+       },
+       {
+        "lo": 0.5,
+        "hi": 0.6,
+        "n": 836,
+        "mean_pred": 0.55021,
+        "frac_pos": 0.58493
+       },
+       {
+        "lo": 0.6,
+        "hi": 0.7,
+        "n": 789,
+        "mean_pred": 0.65073,
+        "frac_pos": 0.63371
+       },
+       {
+        "lo": 0.7,
+        "hi": 0.8,
+        "n": 775,
+        "mean_pred": 0.74823,
+        "frac_pos": 0.77032
+       },
+       {
+        "lo": 0.8,
+        "hi": 0.9,
+        "n": 756,
+        "mean_pred": 0.85099,
+        "frac_pos": 0.87963
+       },
+       {
+        "lo": 0.9,
+        "hi": 1.0,
+        "n": 1850,
+        "mean_pred": 0.97187,
+        "frac_pos": 0.98108
+       }
+      ],
+      "confusion_matrix": [
+       [
+        2996,
+        940
+       ],
+       [
+        974,
+        4066
+       ]
+      ]
+     },
+     "train_seconds": 1.2
+    },
+    "random_forest": {
+     "validation": {
+      "accuracy": 0.77883,
+      "precision": 0.79979,
+      "recall": 0.78166,
+      "f1": 0.79062,
+      "roc_auc": 0.86941,
+      "brier": 0.14744,
+      "log_loss": 0.44337,
+      "ece": 0.02125,
+      "reliability": [
+       {
+        "lo": 0.0,
+        "hi": 0.1,
+        "n": 1169,
+        "mean_pred": 0.03436,
+        "frac_pos": 0.01625
+       },
+       {
+        "lo": 0.1,
+        "hi": 0.2,
+        "n": 662,
+        "mean_pred": 0.1522,
+        "frac_pos": 0.17523
+       },
+       {
+        "lo": 0.2,
+        "hi": 0.3,
+        "n": 785,
+        "mean_pred": 0.24885,
+        "frac_pos": 0.28408
+       },
+       {
+        "lo": 0.3,
+        "hi": 0.4,
+        "n": 774,
+        "mean_pred": 0.35221,
+        "frac_pos": 0.36434
+       },
+       {
+        "lo": 0.4,
+        "hi": 0.5,
+        "n": 912,
+        "mean_pred": 0.45197,
+        "frac_pos": 0.44956
+       },
+       {
+        "lo": 0.5,
+        "hi": 0.6,
+        "n": 921,
+        "mean_pred": 0.55021,
+        "frac_pos": 0.56135
+       },
+       {
+        "lo": 0.6,
+        "hi": 0.7,
+        "n": 850,
+        "mean_pred": 0.6497,
+        "frac_pos": 0.72
+       },
+       {
+        "lo": 0.7,
+        "hi": 0.8,
+        "n": 760,
+        "mean_pred": 0.75015,
+        "frac_pos": 0.79211
+       },
+       {
+        "lo": 0.8,
+        "hi": 0.9,
+        "n": 723,
+        "mean_pred": 0.85128,
+        "frac_pos": 0.86445
+       },
+       {
+        "lo": 0.9,
+        "hi": 1.0,
+        "n": 1446,
+        "mean_pred": 0.96732,
+        "frac_pos": 0.97026
+       }
+      ],
+      "confusion_matrix": [
+       [
+        3252,
+        941
+       ],
+       [
+        1050,
+        3759
+       ]
+      ]
+     },
+     "test": {
+      "accuracy": 0.7871,
+      "precision": 0.81792,
+      "recall": 0.79861,
+      "f1": 0.80815,
+      "roc_auc": 0.88357,
+      "brier": 0.13895,
+      "log_loss": 0.41952,
+      "ece": 0.03568,
+      "reliability": [
+       {
+        "lo": 0.0,
+        "hi": 0.1,
+        "n": 1047,
+        "mean_pred": 0.03528,
+        "frac_pos": 0.00764
+       },
+       {
+        "lo": 0.1,
+        "hi": 0.2,
+        "n": 637,
+        "mean_pred": 0.15218,
+        "frac_pos": 0.11774
+       },
+       {
+        "lo": 0.2,
+        "hi": 0.3,
+        "n": 699,
+        "mean_pred": 0.24797,
+        "frac_pos": 0.26753
+       },
+       {
+        "lo": 0.3,
+        "hi": 0.4,
+        "n": 745,
+        "mean_pred": 0.35055,
+        "frac_pos": 0.3557
+       },
+       {
+        "lo": 0.4,
+        "hi": 0.5,
+        "n": 927,
+        "mean_pred": 0.45089,
+        "frac_pos": 0.5178
+       },
+       {
+        "lo": 0.5,
+        "hi": 0.6,
+        "n": 957,
+        "mean_pred": 0.55004,
+        "frac_pos": 0.59979
+       },
+       {
+        "lo": 0.6,
+        "hi": 0.7,
+        "n": 897,
+        "mean_pred": 0.65,
+        "frac_pos": 0.68562
+       },
+       {
+        "lo": 0.7,
+        "hi": 0.8,
+        "n": 732,
+        "mean_pred": 0.74809,
+        "frac_pos": 0.83197
+       },
+       {
+        "lo": 0.8,
+        "hi": 0.9,
+        "n": 687,
+        "mean_pred": 0.85183,
+        "frac_pos": 0.89665
+       },
+       {
+        "lo": 0.9,
+        "hi": 1.0,
+        "n": 1648,
+        "mean_pred": 0.96658,
+        "frac_pos": 0.97755
+       }
+      ],
+      "confusion_matrix": [
+       [
+        3040,
+        896
+       ],
+       [
+        1015,
+        4025
+       ]
+      ]
+     },
+     "train_seconds": 5.0
+    },
+    "gradient_boosting": {
+     "validation": {
+      "accuracy": 0.77349,
+      "precision": 0.79331,
+      "recall": 0.77896,
+      "f1": 0.78607,
+      "roc_auc": 0.86433,
+      "brier": 0.15085,
+      "log_loss": 0.46027,
+      "ece": 0.0286,
+      "reliability": [
+       {
+        "lo": 0.0,
+        "hi": 0.1,
+        "n": 1483,
+        "mean_pred": 0.0294,
+        "frac_pos": 0.04922
+       },
+       {
+        "lo": 0.1,
+        "hi": 0.2,
+        "n": 583,
+        "mean_pred": 0.1485,
+        "frac_pos": 0.20926
+       },
+       {
+        "lo": 0.2,
+        "hi": 0.3,
+        "n": 697,
+        "mean_pred": 0.25117,
+        "frac_pos": 0.31994
+       },
+       {
+        "lo": 0.3,
+        "hi": 0.4,
+        "n": 739,
+        "mean_pred": 0.35212,
+        "frac_pos": 0.39513
+       },
+       {
+        "lo": 0.4,
+        "hi": 0.5,
+        "n": 778,
+        "mean_pred": 0.44931,
+        "frac_pos": 0.45373
+       },
+       {
+        "lo": 0.5,
+        "hi": 0.6,
+        "n": 785,
+        "mean_pred": 0.54751,
+        "frac_pos": 0.54013
+       },
+       {
+        "lo": 0.6,
+        "hi": 0.7,
+        "n": 728,
+        "mean_pred": 0.64897,
+        "frac_pos": 0.6717
+       },
+       {
+        "lo": 0.7,
+        "hi": 0.8,
+        "n": 610,
+        "mean_pred": 0.74945,
+        "frac_pos": 0.74426
+       },
+       {
+        "lo": 0.8,
+        "hi": 0.9,
+        "n": 584,
+        "mean_pred": 0.84932,
+        "frac_pos": 0.84075
+       },
+       {
+        "lo": 0.9,
+        "hi": 1.0,
+        "n": 2015,
+        "mean_pred": 0.97615,
+        "frac_pos": 0.93697
+       }
+      ],
+      "confusion_matrix": [
+       [
+        3217,
+        976
+       ],
+       [
+        1063,
+        3746
+       ]
+      ]
+     },
+     "test": {
+      "accuracy": 0.78309,
+      "precision": 0.81198,
+      "recall": 0.79861,
+      "f1": 0.80524,
+      "roc_auc": 0.87703,
+      "brier": 0.14265,
+      "log_loss": 0.42721,
+      "ece": 0.02226,
+      "reliability": [
+       {
+        "lo": 0.0,
+        "hi": 0.1,
+        "n": 1325,
+        "mean_pred": 0.03082,
+        "frac_pos": 0.05736
+       },
+       {
+        "lo": 0.1,
+        "hi": 0.2,
+        "n": 607,
+        "mean_pred": 0.15006,
+        "frac_pos": 0.21252
+       },
+       {
+        "lo": 0.2,
+        "hi": 0.3,
+        "n": 635,
+        "mean_pred": 0.25039,
+        "frac_pos": 0.25039
+       },
+       {
+        "lo": 0.3,
+        "hi": 0.4,
+        "n": 686,
+        "mean_pred": 0.35021,
+        "frac_pos": 0.40087
+       },
+       {
+        "lo": 0.4,
+        "hi": 0.5,
+        "n": 766,
+        "mean_pred": 0.4506,
+        "frac_pos": 0.49086
+       },
+       {
+        "lo": 0.5,
+        "hi": 0.6,
+        "n": 880,
+        "mean_pred": 0.55074,
+        "frac_pos": 0.58068
+       },
+       {
+        "lo": 0.6,
+        "hi": 0.7,
+        "n": 772,
+        "mean_pred": 0.649,
+        "frac_pos": 0.64378
+       },
+       {
+        "lo": 0.7,
+        "hi": 0.8,
+        "n": 615,
+        "mean_pred": 0.74869,
+        "frac_pos": 0.77886
+       },
+       {
+        "lo": 0.8,
+        "hi": 0.9,
+        "n": 611,
+        "mean_pred": 0.85116,
+        "frac_pos": 0.83633
+       },
+       {
+        "lo": 0.9,
+        "hi": 1.0,
+        "n": 2079,
+        "mean_pred": 0.97651,
+        "frac_pos": 0.97499
+       }
+      ],
+      "confusion_matrix": [
+       [
+        3004,
+        932
+       ],
+       [
+        1015,
+        4025
+       ]
+      ]
+     },
+     "train_seconds": 0.9
+    },
+    "xgboost": {
+     "validation": {
+      "accuracy": 0.77372,
+      "precision": 0.79278,
+      "recall": 0.78041,
+      "f1": 0.78655,
+      "roc_auc": 0.86353,
+      "brier": 0.15155,
+      "log_loss": 0.46081,
+      "ece": 0.03032,
+      "reliability": [
+       {
+        "lo": 0.0,
+        "hi": 0.1,
+        "n": 1463,
+        "mean_pred": 0.02848,
+        "frac_pos": 0.05195
+       },
+       {
+        "lo": 0.1,
+        "hi": 0.2,
+        "n": 657,
+        "mean_pred": 0.1485,
+        "frac_pos": 0.22679
+       },
+       {
+        "lo": 0.2,
+        "hi": 0.3,
+        "n": 672,
+        "mean_pred": 0.24993,
+        "frac_pos": 0.3006
+       },
+       {
+        "lo": 0.3,
+        "hi": 0.4,
+        "n": 714,
+        "mean_pred": 0.35051,
+        "frac_pos": 0.38235
+       },
+       {
+        "lo": 0.4,
+        "hi": 0.5,
+        "n": 762,
+        "mean_pred": 0.45196,
+        "frac_pos": 0.46719
+       },
+       {
+        "lo": 0.5,
+        "hi": 0.6,
+        "n": 813,
+        "mean_pred": 0.54957,
+        "frac_pos": 0.54244
+       },
+       {
+        "lo": 0.6,
+        "hi": 0.7,
+        "n": 705,
+        "mean_pred": 0.64997,
+        "frac_pos": 0.68227
+       },
+       {
+        "lo": 0.7,
+        "hi": 0.8,
+        "n": 677,
+        "mean_pred": 0.74944,
+        "frac_pos": 0.75628
+       },
+       {
+        "lo": 0.8,
+        "hi": 0.9,
+        "n": 564,
+        "mean_pred": 0.84886,
+        "frac_pos": 0.82979
+       },
+       {
+        "lo": 0.9,
+        "hi": 1.0,
+        "n": 1975,
+        "mean_pred": 0.97508,
+        "frac_pos": 0.93722
+       }
+      ],
+      "confusion_matrix": [
+       [
+        3212,
+        981
+       ],
+       [
+        1056,
+        3753
+       ]
+      ]
+     },
+     "test": {
+      "accuracy": 0.78621,
+      "precision": 0.81279,
+      "recall": 0.80456,
+      "f1": 0.80865,
+      "roc_auc": 0.87966,
+      "brier": 0.14105,
+      "log_loss": 0.42339,
+      "ece": 0.02088,
+      "reliability": [
+       {
+        "lo": 0.0,
+        "hi": 0.1,
+        "n": 1303,
+        "mean_pred": 0.03028,
+        "frac_pos": 0.06216
+       },
+       {
+        "lo": 0.1,
+        "hi": 0.2,
+        "n": 650,
+        "mean_pred": 0.14723,
+        "frac_pos": 0.18769
+       },
+       {
+        "lo": 0.2,
+        "hi": 0.3,
+        "n": 644,
+        "mean_pred": 0.25116,
+        "frac_pos": 0.28571
+       },
+       {
+        "lo": 0.3,
+        "hi": 0.4,
+        "n": 604,
+        "mean_pred": 0.35053,
+        "frac_pos": 0.36424
+       },
+       {
+        "lo": 0.4,
+        "hi": 0.5,
+        "n": 786,
+        "mean_pred": 0.45252,
+        "frac_pos": 0.48092
+       },
+       {
+        "lo": 0.5,
+        "hi": 0.6,
+        "n": 879,
+        "mean_pred": 0.54825,
+        "frac_pos": 0.5711
+       },
+       {
+        "lo": 0.6,
+        "hi": 0.7,
+        "n": 807,
+        "mean_pred": 0.64914,
+        "frac_pos": 0.63941
+       },
+       {
+        "lo": 0.7,
+        "hi": 0.8,
+        "n": 636,
+        "mean_pred": 0.74791,
+        "frac_pos": 0.80189
+       },
+       {
+        "lo": 0.8,
+        "hi": 0.9,
+        "n": 603,
+        "mean_pred": 0.84979,
+        "frac_pos": 0.84577
+       },
+       {
+        "lo": 0.9,
+        "hi": 1.0,
+        "n": 2064,
+        "mean_pred": 0.97626,
+        "frac_pos": 0.97723
+       }
+      ],
+      "confusion_matrix": [
+       [
+        3002,
+        934
+       ],
+       [
+        985,
+        4055
+       ]
+      ]
+     },
+     "train_seconds": 0.5
+    }
+   },
+   "selection_rule": "lowest validation log-loss; simplest model within 1% of the best",
+   "calibrated": false,
+   "calibration_check": {
+    "raw_val_ll": 0.42883,
+    "calibrated_val_ll": 0.4443
+   },
+   "final": {
+    "validation": {
+     "accuracy": 0.78527,
+     "precision": 0.80376,
+     "recall": 0.79122,
+     "f1": 0.79744,
+     "roc_auc": 0.87607,
+     "brier": 0.14349,
+     "log_loss": 0.42982,
+     "ece": 0.01821,
+     "reliability": [
+      {
+       "lo": 0.0,
+       "hi": 0.1,
+       "n": 1407,
+       "mean_pred": 0.02781,
+       "frac_pos": 0.02843
+      },
+      {
+       "lo": 0.1,
+       "hi": 0.2,
+       "n": 664,
+       "mean_pred": 0.14821,
+       "frac_pos": 0.1747
+      },
+      {
+       "lo": 0.2,
+       "hi": 0.3,
+       "n": 704,
+       "mean_pred": 0.25244,
+       "frac_pos": 0.31534
+      },
+      {
+       "lo": 0.3,
+       "hi": 0.4,
+       "n": 707,
+       "mean_pred": 0.34876,
+       "frac_pos": 0.38614
+      },
+      {
+       "lo": 0.4,
+       "hi": 0.5,
+       "n": 786,
+       "mean_pred": 0.44948,
+       "frac_pos": 0.44911
+      },
+      {
+       "lo": 0.5,
+       "hi": 0.6,
+       "n": 779,
+       "mean_pred": 0.5489,
+       "frac_pos": 0.58023
+      },
+      {
+       "lo": 0.6,
+       "hi": 0.7,
+       "n": 701,
+       "mean_pred": 0.64853,
+       "frac_pos": 0.68331
+      },
+      {
+       "lo": 0.7,
+       "hi": 0.8,
+       "n": 762,
+       "mean_pred": 0.75044,
+       "frac_pos": 0.72835
+      },
+      {
+       "lo": 0.8,
+       "hi": 0.9,
+       "n": 757,
+       "mean_pred": 0.85305,
+       "frac_pos": 0.84544
+      },
+      {
+       "lo": 0.9,
+       "hi": 1.0,
+       "n": 1735,
+       "mean_pred": 0.96949,
+       "frac_pos": 0.96772
+      }
+     ],
+     "confusion_matrix": [
+      [
+       3264,
+       929
+      ],
+      [
+       1004,
+       3805
+      ]
+     ]
+    },
+    "test": {
+     "accuracy": 0.78676,
+     "precision": 0.81223,
+     "recall": 0.80675,
+     "f1": 0.80948,
+     "roc_auc": 0.8825,
+     "brier": 0.13899,
+     "log_loss": 0.41618,
+     "ece": 0.02142,
+     "reliability": [
+      {
+       "lo": 0.0,
+       "hi": 0.1,
+       "n": 1274,
+       "mean_pred": 0.02988,
+       "frac_pos": 0.03532
+      },
+      {
+       "lo": 0.1,
+       "hi": 0.2,
+       "n": 597,
+       "mean_pred": 0.14762,
+       "frac_pos": 0.18258
+      },
+      {
+       "lo": 0.2,
+       "hi": 0.3,
+       "n": 619,
+       "mean_pred": 0.25238,
+       "frac_pos": 0.27625
+      },
+      {
+       "lo": 0.3,
+       "hi": 0.4,
+       "n": 699,
+       "mean_pred": 0.35209,
+       "frac_pos": 0.3691
+      },
+      {
+       "lo": 0.4,
+       "hi": 0.5,
+       "n": 781,
+       "mean_pred": 0.45004,
+       "frac_pos": 0.50064
+      },
+      {
+       "lo": 0.5,
+       "hi": 0.6,
+       "n": 836,
+       "mean_pred": 0.55021,
+       "frac_pos": 0.58493
+      },
+      {
+       "lo": 0.6,
+       "hi": 0.7,
+       "n": 789,
+       "mean_pred": 0.65073,
+       "frac_pos": 0.63371
+      },
+      {
+       "lo": 0.7,
+       "hi": 0.8,
+       "n": 775,
+       "mean_pred": 0.74823,
+       "frac_pos": 0.77032
+      },
+      {
+       "lo": 0.8,
+       "hi": 0.9,
+       "n": 756,
+       "mean_pred": 0.85099,
+       "frac_pos": 0.87963
+      },
+      {
+       "lo": 0.9,
+       "hi": 1.0,
+       "n": 1850,
+       "mean_pred": 0.97187,
+       "frac_pos": 0.98108
+      }
+     ],
+     "confusion_matrix": [
+      [
+       2996,
+       940
+      ],
+      [
+       974,
+       4066
+      ]
+     ]
+    }
+   },
+   "baseline": {
+    "majority_accuracy": 0.5615,
+    "prior_log_loss": 0.69108
+   },
+   "feature_importance": {
+    "lead_security": 0.89949,
+    "elo_diff": 0.06026,
+    "lineup_diff": 0.0049,
+    "tp_pct_diff": 0.00291,
+    "possession": 0.00223,
+    "fg_pct_diff": 0.00195,
+    "tov_diff": 0.00032,
+    "time_remaining": -3e-05,
+    "quarter": -9e-05,
+    "ft_pct_diff": -0.00016,
+    "ast_diff": -0.00022,
+    "score_diff": -0.00077,
+    "reb_diff": -0.0009,
+    "foul_diff": -0.00158,
+    "eff_diff": -0.00183
+   },
+   "split": {
+    "rows": {
+     "train": 41880,
+     "validation": 9002,
+     "test": 8976
+    },
+    "matches": {
+     "train": 1819,
+     "validation": 391,
+     "test": 390
+    },
+    "scheme": "chronological, match-grouped 70/15/15"
+   },
+   "bootstrap_members": 12,
+   "dataset": {
+    "rows": 59858,
+    "matches": 2600,
+    "class_balance": {
+     "0": 0.4793,
+     "1": 0.5207
+    },
+    "n_features": 15,
+    "data_hash": "ca6aba238ef95e5a",
+    "generator": "possession-by-possession simulator",
+    "target": "home team wins (OT resolved)",
+    "snapshot": "every 2 minutes of game clock"
+   }
+  }
+ },
+ "players": {
+  "cricket_runs": {
+   "task": "regression:runs",
+   "chosen": "ridge",
+   "chosen_display": "Ridge Regression",
+   "comparison": {
+    "ridge": {
+     "validation": {
+      "mae": 15.99066,
+      "rmse": 25.77037,
+      "r2": 0.16552
+     },
+     "test": {
+      "mae": 16.39896,
+      "rmse": 28.83273,
+      "r2": 0.14635
+     }
+    },
+    "random_forest": {
+     "validation": {
+      "mae": 15.74641,
+      "rmse": 25.77705,
+      "r2": 0.16509
+     },
+     "test": {
+      "mae": 16.1009,
+      "rmse": 28.94984,
+      "r2": 0.1394
+     }
+    },
+    "gradient_boosting": {
+     "validation": {
+      "mae": 15.53761,
+      "rmse": 25.79538,
+      "r2": 0.1639
+     },
+     "test": {
+      "mae": 15.96295,
+      "rmse": 29.07541,
+      "r2": 0.13192
+     }
+    },
+    "xgboost": {
+     "validation": {
+      "mae": 15.49411,
+      "rmse": 25.65853,
+      "r2": 0.17275
+     },
+     "test": {
+      "mae": 15.89856,
+      "rmse": 29.03071,
+      "r2": 0.13459
+     }
+    }
+   },
+   "baseline_mean_predictor": {
+    "mae": 18.45974,
+    "rmse": 31.20675,
+    "r2": -1e-05
+   },
+   "final": {
+    "test": {
+     "mae": 16.39896,
+     "rmse": 28.83273,
+     "r2": 0.14635
+    }
+   },
+   "residual_interval80": [
+    -23.76229,
+    23.02116
+   ],
+   "feature_importance": {
+    "bat_avg": 2.01735,
+    "bat_slot": 0.54253,
+    "venue_par": 0.14182,
+    "opp_bowling": 0.021,
+    "bat_sr": 0.01079,
+    "bat_form": 0.00376,
+    "bat_innings": -0.0028
+   },
+   "rows": {
+    "train": 9240,
+    "validation": 2100,
+    "test": 2520
+   },
+   "dataset": {
+    "rows": 13860,
+    "players": 420,
+    "split": "chronological by game index 70/15/15"
+   }
+  },
+  "cricket_wickets": {
+   "task": "regression:wickets",
+   "chosen": "poisson_glm",
+   "chosen_display": "Poisson GLM",
+   "comparison": {
+    "poisson_glm": {
+     "validation": {
+      "mae": 0.82074,
+      "rmse": 1.0298,
+      "r2": 0.03073
+     },
+     "test": {
+      "mae": 0.82664,
+      "rmse": 1.09747,
+      "r2": 0.03414
+     }
+    },
+    "random_forest": {
+     "validation": {
+      "mae": 0.82318,
+      "rmse": 1.03285,
+      "r2": 0.02499
+     },
+     "test": {
+      "mae": 0.83641,
+      "rmse": 1.10705,
+      "r2": 0.01719
+     }
+    },
+    "gradient_boosting": {
+     "validation": {
+      "mae": 0.83043,
+      "rmse": 1.04264,
+      "r2": 0.00641
+     },
+     "test": {
+      "mae": 0.83868,
+      "rmse": 1.10726,
+      "r2": 0.01682
+     }
+    },
+    "xgboost": {
+     "validation": {
+      "mae": 0.82248,
+      "rmse": 1.03567,
+      "r2": 0.01965
+     },
+     "test": {
+      "mae": 0.83245,
+      "rmse": 1.10211,
+      "r2": 0.02595
+     }
+    }
+   },
+   "baseline_mean_predictor": {
+    "mae": 0.81783,
+    "rmse": 1.1172,
+    "r2": -0.0009
+   },
+   "final": {
+    "test": {
+     "mae": 0.82664,
+     "rmse": 1.09747,
+     "r2": 0.03414
+    }
+   },
+   "residual_interval80": [
+    -1.0179,
+    1.261
+   ],
+   "feature_importance": {
+    "bowl_wpo": 0.02473,
+    "opp_batting": 0.00867,
+    "bowl_form_econ": 0.00355,
+    "bowl_overs": 0.00176,
+    "bowl_form_wpo": 0.00016,
+    "venue_par": -4e-05,
+    "bowl_econ": -0.00075
+   },
+   "rows": {
+    "train": 4972,
+    "validation": 1130,
+    "test": 1356
+   },
+   "dataset": {
+    "rows": 7458,
+    "players": 226,
+    "split": "chronological by game index 70/15/15"
+   }
+  },
+  "cricket_economy": {
+   "task": "regression:economy",
+   "chosen": "ridge",
+   "chosen_display": "Ridge Regression",
+   "comparison": {
+    "ridge": {
+     "validation": {
+      "mae": 0.76651,
+      "rmse": 0.97963,
+      "r2": 0.43638
+     },
+     "test": {
+      "mae": 0.74535,
+      "rmse": 0.93953,
+      "r2": 0.45189
+     }
+    },
+    "random_forest": {
+     "validation": {
+      "mae": 0.77646,
+      "rmse": 0.99345,
+      "r2": 0.42036
+     },
+     "test": {
+      "mae": 0.75689,
+      "rmse": 0.95596,
+      "r2": 0.43256
+     }
+    },
+    "gradient_boosting": {
+     "validation": {
+      "mae": 0.77742,
+      "rmse": 0.9954,
+      "r2": 0.41808
+     },
+     "test": {
+      "mae": 0.75386,
+      "rmse": 0.94883,
+      "r2": 0.44099
+     }
+    },
+    "xgboost": {
+     "validation": {
+      "mae": 0.77225,
+      "rmse": 0.98977,
+      "r2": 0.42464
+     },
+     "test": {
+      "mae": 0.75301,
+      "rmse": 0.94794,
+      "r2": 0.44204
+     }
+    }
+   },
+   "baseline_mean_predictor": {
+    "mae": 1.014,
+    "rmse": 1.26905,
+    "r2": -0.0
+   },
+   "final": {
+    "test": {
+     "mae": 0.74535,
+     "rmse": 0.93953,
+     "r2": 0.45189
+    }
+   },
+   "residual_interval80": [
+    -1.14167,
+    1.19953
+   ],
+   "feature_importance": {
+    "bowl_econ": 0.29438,
+    "venue_par": 0.17237,
+    "opp_batting": 0.04061,
+    "bowl_form_econ": 0.00465,
+    "bowl_form_wpo": 0.00052,
+    "bowl_overs": 0.00016,
+    "bowl_wpo": -0.0
+   },
+   "rows": {
+    "train": 4972,
+    "validation": 1130,
+    "test": 1356
+   },
+   "dataset": {
+    "rows": 7458,
+    "players": 226,
+    "split": "chronological by game index 70/15/15"
+   }
+  },
+  "football_goals": {
+   "task": "regression:goals",
+   "chosen": "poisson_glm",
+   "chosen_display": "Poisson GLM",
+   "comparison": {
+    "poisson_glm": {
+     "validation": {
+      "mae": 0.22612,
+      "rmse": 0.40273,
+      "r2": 0.16646
+     },
+     "test": {
+      "mae": 0.22985,
+      "rmse": 0.39328,
+      "r2": 0.11591
+     }
+    },
+    "random_forest": {
+     "validation": {
+      "mae": 0.22633,
+      "rmse": 0.40595,
+      "r2": 0.15309
+     },
+     "test": {
+      "mae": 0.22765,
+      "rmse": 0.39136,
+      "r2": 0.12454
+     }
+    },
+    "gradient_boosting": {
+     "validation": {
+      "mae": 0.22513,
+      "rmse": 0.40999,
+      "r2": 0.13614
+     },
+     "test": {
+      "mae": 0.22702,
+      "rmse": 0.3929,
+      "r2": 0.11763
+     }
+    },
+    "xgboost": {
+     "validation": {
+      "mae": 0.22557,
+      "rmse": 0.40791,
+      "r2": 0.1449
+     },
+     "test": {
+      "mae": 0.22765,
+      "rmse": 0.39113,
+      "r2": 0.12558
+     }
+    }
+   },
+   "baseline_mean_predictor": {
+    "mae": 0.26472,
+    "rmse": 0.41827,
+    "r2": -0.0
+   },
+   "final": {
+    "test": {
+     "mae": 0.22985,
+     "rmse": 0.39328,
+     "r2": 0.11591
+    }
+   },
+   "residual_interval80": [
+    -0.30079,
+    0.59128
+   ],
+   "feature_importance": {
+    "fb_opp_def": 0.00368,
+    "fb_pos": 0.00149,
+    "fb_team_att": 0.00028,
+    "fb_exp_minutes": 3e-05,
+    "fb_home": -1e-05,
+    "fb_ast90": -0.00074,
+    "fb_form_shots90": -0.00133,
+    "fb_shots90": -0.00244,
+    "fb_goals90": -0.00314
+   },
+   "rows": {
+    "train": 9240,
+    "validation": 2100,
+    "test": 2520
+   },
+   "dataset": {
+    "rows": 13860,
+    "players": 420,
+    "split": "chronological by game index 70/15/15"
+   }
+  },
+  "football_assists": {
+   "task": "regression:assists",
+   "chosen": "poisson_glm",
+   "chosen_display": "Poisson GLM",
+   "comparison": {
+    "poisson_glm": {
+     "validation": {
+      "mae": 0.17967,
+      "rmse": 0.31435,
+      "r2": 0.0127
+     },
+     "test": {
+      "mae": 0.17385,
+      "rmse": 0.31037,
+      "r2": 0.00551
+     }
+    },
+    "random_forest": {
+     "validation": {
+      "mae": 0.17767,
+      "rmse": 0.31199,
+      "r2": 0.02746
+     },
+     "test": {
+      "mae": 0.17524,
+      "rmse": 0.31093,
+      "r2": 0.0019
+     }
+    },
+    "gradient_boosting": {
+     "validation": {
+      "mae": 0.17751,
+      "rmse": 0.31234,
+      "r2": 0.02531
+     },
+     "test": {
+      "mae": 0.17476,
+      "rmse": 0.31113,
+      "r2": 0.00062
+     }
+    },
+    "xgboost": {
+     "validation": {
+      "mae": 0.17773,
+      "rmse": 0.31177,
+      "r2": 0.02883
+     },
+     "test": {
+      "mae": 0.17423,
+      "rmse": 0.30994,
+      "r2": 0.00824
+     }
+    }
+   },
+   "baseline_mean_predictor": {
+    "mae": 0.17833,
+    "rmse": 0.31174,
+    "r2": -0.00332
+   },
+   "final": {
+    "test": {
+     "mae": 0.17385,
+     "rmse": 0.31037,
+     "r2": 0.00551
+    }
+   },
+   "residual_interval80": [
+    -0.16079,
+    -0.04756
+   ],
+   "feature_importance": {
+    "fb_goals90": 0.00483,
+    "fb_shots90": 0.00107,
+    "fb_opp_def": 0.00032,
+    "fb_team_att": 0.00013,
+    "fb_home": 0.0,
+    "fb_exp_minutes": -2e-05,
+    "fb_form_shots90": -6e-05,
+    "fb_ast90": -0.00015,
+    "fb_pos": -0.00116
+   },
+   "rows": {
+    "train": 9240,
+    "validation": 2100,
+    "test": 2520
+   },
+   "dataset": {
+    "rows": 13860,
+    "players": 420,
+    "split": "chronological by game index 70/15/15"
+   }
+  },
+  "football_shots": {
+   "task": "regression:shots",
+   "chosen": "poisson_glm",
+   "chosen_display": "Poisson GLM",
+   "comparison": {
+    "poisson_glm": {
+     "validation": {
+      "mae": 1.05088,
+      "rmse": 1.38267,
+      "r2": 0.30903
+     },
+     "test": {
+      "mae": 1.05335,
+      "rmse": 1.3951,
+      "r2": 0.28977
+     }
+    },
+    "random_forest": {
+     "validation": {
+      "mae": 1.05285,
+      "rmse": 1.38946,
+      "r2": 0.30222
+     },
+     "test": {
+      "mae": 1.05953,
+      "rmse": 1.40165,
+      "r2": 0.28308
+     }
+    },
+    "gradient_boosting": {
+     "validation": {
+      "mae": 1.05675,
+      "rmse": 1.38929,
+      "r2": 0.30239
+     },
+     "test": {
+      "mae": 1.05943,
+      "rmse": 1.39528,
+      "r2": 0.28958
+     }
+    },
+    "xgboost": {
+     "validation": {
+      "mae": 1.05507,
+      "rmse": 1.38999,
+      "r2": 0.30169
+     },
+     "test": {
+      "mae": 1.05543,
+      "rmse": 1.39188,
+      "r2": 0.29304
+     }
+    }
+   },
+   "baseline_mean_predictor": {
+    "mae": 1.27606,
+    "rmse": 1.65543,
+    "r2": -4e-05
+   },
+   "final": {
+    "test": {
+     "mae": 1.05335,
+     "rmse": 1.3951,
+     "r2": 0.28977
+    }
+   },
+   "residual_interval80": [
+    -1.40069,
+    1.73709
+   ],
+   "feature_importance": {
+    "fb_pos": 0.11945,
+    "fb_shots90": 0.04492,
+    "fb_opp_def": 0.02262,
+    "fb_team_att": 0.02001,
+    "fb_exp_minutes": 0.00156,
+    "fb_home": 0.00145,
+    "fb_goals90": -0.00039,
+    "fb_form_shots90": -0.0006,
+    "fb_ast90": -0.00205
+   },
+   "rows": {
+    "train": 9240,
+    "validation": 2100,
+    "test": 2520
+   },
+   "dataset": {
+    "rows": 13860,
+    "players": 420,
+    "split": "chronological by game index 70/15/15"
+   }
+  },
+  "basketball_points": {
+   "task": "regression:points",
+   "chosen": "random_forest",
+   "chosen_display": "Random Forest",
+   "comparison": {
+    "ridge": {
+     "validation": {
+      "mae": 3.76228,
+      "rmse": 5.1025,
+      "r2": 0.56983
+     },
+     "test": {
+      "mae": 3.71179,
+      "rmse": 4.84772,
+      "r2": 0.59391
+     }
+    },
+    "random_forest": {
+     "validation": {
+      "mae": 3.73659,
+      "rmse": 5.07959,
+      "r2": 0.57368
+     },
+     "test": {
+      "mae": 3.68257,
+      "rmse": 4.82677,
+      "r2": 0.59741
+     }
+    },
+    "gradient_boosting": {
+     "validation": {
+      "mae": 3.71645,
+      "rmse": 5.0493,
+      "r2": 0.57875
+     },
+     "test": {
+      "mae": 3.67811,
+      "rmse": 4.82065,
+      "r2": 0.59843
+     }
+    },
+    "xgboost": {
+     "validation": {
+      "mae": 3.70873,
+      "rmse": 5.04215,
+      "r2": 0.57994
+     },
+     "test": {
+      "mae": 3.69665,
+      "rmse": 4.833,
+      "r2": 0.59637
+     }
+    }
+   },
+   "baseline_mean_predictor": {
+    "mae": 5.8324,
+    "rmse": 7.60796,
+    "r2": -0.00019
+   },
+   "final": {
+    "test": {
+     "mae": 3.68257,
+     "rmse": 4.82677,
+     "r2": 0.59741
+    }
+   },
+   "residual_interval80": [
+    -5.27264,
+    6.48871
+   ],
+   "feature_importance": {
+    "bb_pts_pm": 1.69948,
+    "bb_exp_minutes": 0.4342,
+    "bb_opp_def": 0.03981,
+    "bb_form_pts_pm": 0.0353,
+    "bb_b2b": 0.02615,
+    "bb_reb_pm": 0.00943,
+    "bb_home": 0.00121,
+    "bb_pos": 1e-05,
+    "bb_ast_pm": -0.00147
+   },
+   "rows": {
+    "train": 9240,
+    "validation": 2100,
+    "test": 2520
+   },
+   "dataset": {
+    "rows": 13860,
+    "players": 420,
+    "split": "chronological by game index 70/15/15"
+   }
+  },
+  "basketball_rebounds": {
+   "task": "regression:rebounds",
+   "chosen": "ridge",
+   "chosen_display": "Ridge Regression",
+   "comparison": {
+    "ridge": {
+     "validation": {
+      "mae": 1.87958,
+      "rmse": 2.4395,
+      "r2": 0.44321
+     },
+     "test": {
+      "mae": 1.82265,
+      "rmse": 2.37383,
+      "r2": 0.46793
+     }
+    },
+    "random_forest": {
+     "validation": {
+      "mae": 1.86458,
+      "rmse": 2.43691,
+      "r2": 0.44439
+     },
+     "test": {
+      "mae": 1.80672,
+      "rmse": 2.35725,
+      "r2": 0.47533
+     }
+    },
+    "gradient_boosting": {
+     "validation": {
+      "mae": 1.85927,
+      "rmse": 2.43032,
+      "r2": 0.44739
+     },
+     "test": {
+      "mae": 1.79346,
+      "rmse": 2.34092,
+      "r2": 0.48258
+     }
+    },
+    "xgboost": {
+     "validation": {
+      "mae": 1.85799,
+      "rmse": 2.43503,
+      "r2": 0.44525
+     },
+     "test": {
+      "mae": 1.79489,
+      "rmse": 2.34721,
+      "r2": 0.47979
+     }
+    }
+   },
+   "baseline_mean_predictor": {
+    "mae": 2.51744,
+    "rmse": 3.2545,
+    "r2": -9e-05
+   },
+   "final": {
+    "test": {
+     "mae": 1.82265,
+     "rmse": 2.37383,
+     "r2": 0.46793
+    }
+   },
+   "residual_interval80": [
+    -2.75912,
+    3.09263
+   ],
+   "feature_importance": {
+    "bb_reb_pm": 0.35016,
+    "bb_exp_minutes": 0.11505,
+    "bb_pts_pm": 0.06254,
+    "bb_pos": 0.03547,
+    "bb_ast_pm": 0.01127,
+    "bb_b2b": 0.00302,
+    "bb_home": 0.00064,
+    "bb_form_pts_pm": -0.0023,
+    "bb_opp_def": -0.00345
+   },
+   "rows": {
+    "train": 9240,
+    "validation": 2100,
+    "test": 2520
+   },
+   "dataset": {
+    "rows": 13860,
+    "players": 420,
+    "split": "chronological by game index 70/15/15"
+   }
+  },
+  "basketball_assists": {
+   "task": "regression:assists",
+   "chosen": "ridge",
+   "chosen_display": "Ridge Regression",
+   "comparison": {
+    "ridge": {
+     "validation": {
+      "mae": 1.47383,
+      "rmse": 1.95091,
+      "r2": 0.39653
+     },
+     "test": {
+      "mae": 1.4336,
+      "rmse": 1.87039,
+      "r2": 0.4166
+     }
+    },
+    "random_forest": {
+     "validation": {
+      "mae": 1.46722,
+      "rmse": 1.93539,
+      "r2": 0.40609
+     },
+     "test": {
+      "mae": 1.42271,
+      "rmse": 1.85747,
+      "r2": 0.42463
+     }
+    },
+    "gradient_boosting": {
+     "validation": {
+      "mae": 1.46292,
+      "rmse": 1.93624,
+      "r2": 0.40557
+     },
+     "test": {
+      "mae": 1.42258,
+      "rmse": 1.86054,
+      "r2": 0.42272
+     }
+    },
+    "xgboost": {
+     "validation": {
+      "mae": 1.45842,
+      "rmse": 1.93306,
+      "r2": 0.40752
+     },
+     "test": {
+      "mae": 1.42327,
+      "rmse": 1.8644,
+      "r2": 0.42033
+     }
+    }
+   },
+   "baseline_mean_predictor": {
+    "mae": 1.8695,
+    "rmse": 2.44888,
+    "r2": -0.0001
+   },
+   "final": {
+    "test": {
+     "mae": 1.4336,
+     "rmse": 1.87039,
+     "r2": 0.4166
+    }
+   },
+   "residual_interval80": [
+    -2.10552,
+    2.51518
+   ],
+   "feature_importance": {
+    "bb_ast_pm": 0.20319,
+    "bb_exp_minutes": 0.05806,
+    "bb_pos": 0.03066,
+    "bb_pts_pm": 0.02859,
+    "bb_form_pts_pm": 0.01286,
+    "bb_reb_pm": 0.00618,
+    "bb_b2b": 0.00375,
+    "bb_home": -3e-05,
+    "bb_opp_def": -0.00023
+   },
+   "rows": {
+    "train": 9240,
+    "validation": 2100,
+    "test": 2520
+   },
+   "dataset": {
+    "rows": 13860,
+    "players": 420,
+    "split": "chronological by game index 70/15/15"
+   }
+  },
+  "cricket_p50": {
+   "task": "binary:p50",
+   "chosen": "logistic_regression",
+   "chosen_display": "Logistic Regression",
+   "classes": [
+    "no",
+    "yes"
+   ],
+   "features": [
+    "bat_avg",
+    "bat_sr",
+    "bat_form",
+    "bat_innings",
+    "bat_slot",
+    "opp_bowling",
+    "venue_par"
+   ],
+   "comparison": {
+    "logistic_regression": {
+     "validation": {
+      "accuracy": 0.90571,
+      "precision": 0.6,
+      "recall": 0.01508,
+      "f1": 0.02941,
+      "roc_auc": 0.78875,
+      "brier": 0.07721,
+      "log_loss": 0.26659,
+      "ece": 0.01169,
+      "reliability": [
+       {
+        "lo": 0.0,
+        "hi": 0.1,
+        "n": 1305,
+        "mean_pred": 0.04657,
+        "frac_pos": 0.03755
+       },
+       {
+        "lo": 0.1,
+        "hi": 0.2,
+        "n": 487,
+        "mean_pred": 0.14221,
+        "frac_pos": 0.14784
+       },
+       {
+        "lo": 0.2,
+        "hi": 0.3,
+        "n": 213,
+        "mean_pred": 0.24075,
+        "frac_pos": 0.19718
+       },
+       {
+        "lo": 0.3,
+        "hi": 0.4,
+        "n": 68,
+        "mean_pred": 0.3398,
+        "frac_pos": 0.33824
+       },
+       {
+        "lo": 0.4,
+        "hi": 0.5,
+        "n": 22,
+        "mean_pred": 0.45039,
+        "frac_pos": 0.45455
+       },
+       {
+        "lo": 0.5,
+        "hi": 0.6,
+        "n": 3,
+        "mean_pred": 0.56157,
+        "frac_pos": 0.66667
+       },
+       {
+        "lo": 0.6,
+        "hi": 0.7,
+        "n": 2,
+        "mean_pred": 0.61538,
+        "frac_pos": 0.5
+       }
+      ],
+      "confusion_matrix": [
+       [
+        1899,
+        2
+       ],
+       [
+        196,
+        3
+       ]
+      ]
+     },
+     "test": {
+      "accuracy": 0.90556,
+      "precision": 0.625,
+      "recall": 0.02083,
+      "f1": 0.04032,
+      "roc_auc": 0.77868,
+      "brier": 0.07916,
+      "log_loss": 0.27185,
+      "ece": 0.01209,
+      "reliability": [
+       {
+        "lo": 0.0,
+        "hi": 0.1,
+        "n": 1543,
+        "mean_pred": 0.04588,
+        "frac_pos": 0.03889
+       },
+       {
+        "lo": 0.1,
+        "hi": 0.2,
+        "n": 624,
+        "mean_pred": 0.14236,
+        "frac_pos": 0.14904
+       },
+       {
+        "lo": 0.2,
+        "hi": 0.3,
+        "n": 234,
+        "mean_pred": 0.24252,
+        "frac_pos": 0.22222
+       },
+       {
+        "lo": 0.3,
+        "hi": 0.4,
+        "n": 86,
+        "mean_pred": 0.34003,
+        "frac_pos": 0.23256
+       },
+       {
+        "lo": 0.4,
+        "hi": 0.5,
+        "n": 25,
+        "mean_pred": 0.44158,
+        "frac_pos": 0.4
+       },
+       {
+        "lo": 0.5,
+        "hi": 0.6,
+        "n": 3,
+        "mean_pred": 0.58713,
+        "frac_pos": 0.66667
+       },
+       {
+        "lo": 0.6,
+        "hi": 0.7,
+        "n": 5,
+        "mean_pred": 0.64418,
+        "frac_pos": 0.6
+       }
+      ],
+      "confusion_matrix": [
+       [
+        2277,
+        3
+       ],
+       [
+        235,
+        5
+       ]
+      ]
+     },
+     "train_seconds": 0.0
+    },
+    "random_forest": {
+     "validation": {
+      "accuracy": 0.90524,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "roc_auc": 0.77719,
+      "brier": 0.07839,
+      "log_loss": 0.26645,
+      "ece": 0.01515,
+      "reliability": [
+       {
+        "lo": 0.0,
+        "hi": 0.1,
+        "n": 955,
+        "mean_pred": 0.02796,
+        "frac_pos": 0.01571
+       },
+       {
+        "lo": 0.1,
+        "hi": 0.2,
+        "n": 858,
+        "mean_pred": 0.14414,
+        "frac_pos": 0.1317
+       },
+       {
+        "lo": 0.2,
+        "hi": 0.3,
+        "n": 266,
+        "mean_pred": 0.23735,
+        "frac_pos": 0.2218
+       },
+       {
+        "lo": 0.3,
+        "hi": 0.4,
+        "n": 21,
+        "mean_pred": 0.31829,
+        "frac_pos": 0.57143
+       }
+      ],
+      "confusion_matrix": [
+       [
+        1901,
+        0
+       ],
+       [
+        199,
+        0
+       ]
+      ]
+     },
+     "test": {
+      "accuracy": 0.90476,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "roc_auc": 0.78345,
+      "brier": 0.07876,
+      "log_loss": 0.26603,
+      "ece": 0.01224,
+      "reliability": [
+       {
+        "lo": 0.0,
+        "hi": 0.1,
+        "n": 1168,
+        "mean_pred": 0.0283,
+        "frac_pos": 0.01969
+       },
+       {
+        "lo": 0.1,
+        "hi": 0.2,
+        "n": 998,
+        "mean_pred": 0.14511,
+        "frac_pos": 0.12826
+       },
+       {
+        "lo": 0.2,
+        "hi": 0.3,
+        "n": 331,
+        "mean_pred": 0.23648,
+        "frac_pos": 0.24773
+       },
+       {
+        "lo": 0.3,
+        "hi": 0.4,
+        "n": 23,
+        "mean_pred": 0.31439,
+        "frac_pos": 0.30435
+       }
+      ],
+      "confusion_matrix": [
+       [
+        2280,
+        0
+       ],
+       [
+        240,
+        0
+       ]
+      ]
+     },
+     "train_seconds": 0.4
+    },
+    "gradient_boosting": {
+     "validation": {
+      "accuracy": 0.90524,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "roc_auc": 0.74472,
+      "brier": 0.08017,
+      "log_loss": 0.27497,
+      "ece": 0.02006,
+      "reliability": [
+       {
+        "lo": 0.0,
+        "hi": 0.1,
+        "n": 1120,
+        "mean_pred": 0.02875,
+        "frac_pos": 0.03839
+       },
+       {
+        "lo": 0.1,
+        "hi": 0.2,
+        "n": 650,
+        "mean_pred": 0.14827,
+        "frac_pos": 0.12923
+       },
+       {
+        "lo": 0.2,
+        "hi": 0.3,
+        "n": 279,
+        "mean_pred": 0.23767,
+        "frac_pos": 0.1828
+       },
+       {
+        "lo": 0.3,
+        "hi": 0.4,
+        "n": 48,
+        "mean_pred": 0.33531,
+        "frac_pos": 0.39583
+       },
+       {
+        "lo": 0.4,
+        "hi": 0.5,
+        "n": 3,
+        "mean_pred": 0.42135,
+        "frac_pos": 0.66667
+       }
+      ],
+      "confusion_matrix": [
+       [
+        1901,
+        0
+       ],
+       [
+        199,
+        0
+       ]
+      ]
+     },
+     "test": {
+      "accuracy": 0.90476,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "roc_auc": 0.76454,
+      "brier": 0.08018,
+      "log_loss": 0.26846,
+      "ece": 0.007,
+      "reliability": [
+       {
+        "lo": 0.0,
+        "hi": 0.1,
+        "n": 1311,
+        "mean_pred": 0.02712,
+        "frac_pos": 0.02899
+       },
+       {
+        "lo": 0.1,
+        "hi": 0.2,
+        "n": 840,
+        "mean_pred": 0.14582,
+        "frac_pos": 0.1369
+       },
+       {
+        "lo": 0.2,
+        "hi": 0.3,
+        "n": 308,
+        "mean_pred": 0.23894,
+        "frac_pos": 0.23701
+       },
+       {
+        "lo": 0.3,
+        "hi": 0.4,
+        "n": 55,
+        "mean_pred": 0.33603,
+        "frac_pos": 0.23636
+       },
+       {
+        "lo": 0.4,
+        "hi": 0.5,
+        "n": 6,
+        "mean_pred": 0.44019,
+        "frac_pos": 0.16667
+       }
+      ],
+      "confusion_matrix": [
+       [
+        2280,
+        0
+       ],
+       [
+        240,
+        0
+       ]
+      ]
+     },
+     "train_seconds": 0.2
+    },
+    "xgboost": {
+     "validation": {
+      "accuracy": 0.90571,
+      "precision": 1.0,
+      "recall": 0.00503,
+      "f1": 0.01,
+      "roc_auc": 0.74642,
+      "brier": 0.08021,
+      "log_loss": 0.27442,
+      "ece": 0.01489,
+      "reliability": [
+       {
+        "lo": 0.0,
+        "hi": 0.1,
+        "n": 1098,
+        "mean_pred": 0.0281,
+        "frac_pos": 0.03461
+       },
+       {
+        "lo": 0.1,
+        "hi": 0.2,
+        "n": 680,
+        "mean_pred": 0.14657,
+        "frac_pos": 0.13235
+       },
+       {
+        "lo": 0.2,
+        "hi": 0.3,
+        "n": 264,
+        "mean_pred": 0.23691,
+        "frac_pos": 0.20455
+       },
+       {
+        "lo": 0.3,
+        "hi": 0.4,
+        "n": 47,
+        "mean_pred": 0.33495,
+        "frac_pos": 0.23404
+       },
+       {
+        "lo": 0.4,
+        "hi": 0.5,
+        "n": 10,
+        "mean_pred": 0.42742,
+        "frac_pos": 0.5
+       },
+       {
+        "lo": 0.5,
+        "hi": 0.6,
+        "n": 1,
+        "mean_pred": 0.55391,
+        "frac_pos": 1.0
+       }
+      ],
+      "confusion_matrix": [
+       [
+        1901,
+        0
+       ],
+       [
+        198,
+        1
+       ]
+      ]
+     },
+     "test": {
+      "accuracy": 0.90437,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "roc_auc": 0.75254,
+      "brier": 0.08105,
+      "log_loss": 0.27258,
+      "ece": 0.00905,
+      "reliability": [
+       {
+        "lo": 0.0,
+        "hi": 0.1,
+        "n": 1330,
+        "mean_pred": 0.02845,
+        "frac_pos": 0.03233
+       },
+       {
+        "lo": 0.1,
+        "hi": 0.2,
+        "n": 839,
+        "mean_pred": 0.14585,
+        "frac_pos": 0.14541
+       },
+       {
+        "lo": 0.2,
+        "hi": 0.3,
+        "n": 276,
+        "mean_pred": 0.23714,
+        "frac_pos": 0.20652
+       },
+       {
+        "lo": 0.3,
+        "hi": 0.4,
+        "n": 58,
+        "mean_pred": 0.33571,
+        "frac_pos": 0.24138
+       },
+       {
+        "lo": 0.4,
+        "hi": 0.5,
+        "n": 16,
+        "mean_pred": 0.42748,
+        "frac_pos": 0.25
+       },
+       {
+        "lo": 0.5,
+        "hi": 0.6,
+        "n": 1,
+        "mean_pred": 0.52644,
+        "frac_pos": 0.0
+       }
+      ],
+      "confusion_matrix": [
+       [
+        2279,
+        1
+       ],
+       [
+        240,
+        0
+       ]
+      ]
+     },
+     "train_seconds": 0.1
+    }
+   },
+   "selection_rule": "lowest validation log-loss; simplest model within 1% of the best",
+   "calibrated": false,
+   "calibration_check": {
+    "raw_val_ll": 0.26897,
+    "calibrated_val_ll": 0.31585
+   },
+   "final": {
+    "validation": {
+     "accuracy": 0.90571,
+     "precision": 0.6,
+     "recall": 0.01508,
+     "f1": 0.02941,
+     "roc_auc": 0.78875,
+     "brier": 0.07721,
+     "log_loss": 0.26659,
+     "ece": 0.01169,
+     "reliability": [
+      {
+       "lo": 0.0,
+       "hi": 0.1,
+       "n": 1305,
+       "mean_pred": 0.04657,
+       "frac_pos": 0.03755
+      },
+      {
+       "lo": 0.1,
+       "hi": 0.2,
+       "n": 487,
+       "mean_pred": 0.14221,
+       "frac_pos": 0.14784
+      },
+      {
+       "lo": 0.2,
+       "hi": 0.3,
+       "n": 213,
+       "mean_pred": 0.24075,
+       "frac_pos": 0.19718
+      },
+      {
+       "lo": 0.3,
+       "hi": 0.4,
+       "n": 68,
+       "mean_pred": 0.3398,
+       "frac_pos": 0.33824
+      },
+      {
+       "lo": 0.4,
+       "hi": 0.5,
+       "n": 22,
+       "mean_pred": 0.45039,
+       "frac_pos": 0.45455
+      },
+      {
+       "lo": 0.5,
+       "hi": 0.6,
+       "n": 3,
+       "mean_pred": 0.56157,
+       "frac_pos": 0.66667
+      },
+      {
+       "lo": 0.6,
+       "hi": 0.7,
+       "n": 2,
+       "mean_pred": 0.61538,
+       "frac_pos": 0.5
+      }
+     ],
+     "confusion_matrix": [
+      [
+       1899,
+       2
+      ],
+      [
+       196,
+       3
+      ]
+     ]
+    },
+    "test": {
+     "accuracy": 0.90556,
+     "precision": 0.625,
+     "recall": 0.02083,
+     "f1": 0.04032,
+     "roc_auc": 0.77868,
+     "brier": 0.07916,
+     "log_loss": 0.27185,
+     "ece": 0.01209,
+     "reliability": [
+      {
+       "lo": 0.0,
+       "hi": 0.1,
+       "n": 1543,
+       "mean_pred": 0.04588,
+       "frac_pos": 0.03889
+      },
+      {
+       "lo": 0.1,
+       "hi": 0.2,
+       "n": 624,
+       "mean_pred": 0.14236,
+       "frac_pos": 0.14904
+      },
+      {
+       "lo": 0.2,
+       "hi": 0.3,
+       "n": 234,
+       "mean_pred": 0.24252,
+       "frac_pos": 0.22222
+      },
+      {
+       "lo": 0.3,
+       "hi": 0.4,
+       "n": 86,
+       "mean_pred": 0.34003,
+       "frac_pos": 0.23256
+      },
+      {
+       "lo": 0.4,
+       "hi": 0.5,
+       "n": 25,
+       "mean_pred": 0.44158,
+       "frac_pos": 0.4
+      },
+      {
+       "lo": 0.5,
+       "hi": 0.6,
+       "n": 3,
+       "mean_pred": 0.58713,
+       "frac_pos": 0.66667
+      },
+      {
+       "lo": 0.6,
+       "hi": 0.7,
+       "n": 5,
+       "mean_pred": 0.64418,
+       "frac_pos": 0.6
+      }
+     ],
+     "confusion_matrix": [
+      [
+       2277,
+       3
+      ],
+      [
+       235,
+       5
+      ]
+     ]
+    }
+   },
+   "baseline": {
+    "majority_accuracy": 0.90476,
+    "prior_log_loss": 0.31476
+   },
+   "feature_importance": {
+    "bat_avg": 0.03655,
+    "bat_slot": 0.0128,
+    "venue_par": 0.00348,
+    "bat_sr": 0.00307,
+    "bat_innings": -1e-05,
+    "bat_form": -0.00016,
+    "opp_bowling": -0.00111
+   },
+   "split": {
+    "rows": {
+     "train": 9240,
+     "validation": 2100,
+     "test": 2520
+    },
+    "matches": {
+     "train": 22,
+     "validation": 5,
+     "test": 6
+    },
+    "scheme": "chronological, match-grouped 70/15/15"
+   },
+   "bootstrap_members": 0,
+   "dataset": {
+    "rows": 13860,
+    "positive_rate": 0.0998
+   }
+  }
+ },
+ "meta": {
+  "seeds": {
+   "cricket": 7,
+   "football": 11,
+   "basketball": 13,
+   "players": 21
+  },
+  "sizes": {
+   "cricket": 3200,
+   "football": 3200,
+   "basketball": 2600,
+   "players": 420
+  },
+  "quick": false,
+  "python": "3.13.16",
+  "sklearn": "1.9.1",
+  "xgboost": "3.4.1",
+  "numpy": "2.5.3",
+  "pandas": "3.0.5",
+  "data_source": "SYNTHETIC (reproducible simulators in app/synth)",
+  "model_version": "1.1.0",
+  "dataset_version": "synthetic-v1",
+  "train_seconds": 115.8
+ }
+}

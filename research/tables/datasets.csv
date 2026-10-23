@@ -1,0 +1,4 @@
+Sport,Matches,Snapshot rows,Features,Class balance,Train/val/test matches,Data hash,Seed
+Cricket,"3,200","124,221",15,0.502 / 0.498,2240 / 480 / 480,0bd0f72ccbe062b2,7
+Football,"3,200","57,600",17,0.442 / 0.263 / 0.294,2240 / 480 / 480,29a382a8c17befec,11
+Basketball,"2,600","59,858",15,0.479 / 0.521,1819 / 391 / 390,ca6aba238ef95e5a,13

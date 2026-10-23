@@ -1,0 +1,38 @@
+{
+ "cricket": {
+  "file": "cricket_snapshots.csv",
+  "rows_in_file": 11594,
+  "rows_generated": 124221,
+  "matches_generated": 3200,
+  "full_export": false,
+  "data_hash": "0bd0f72ccbe062b2",
+  "seed": 7,
+  "dataset_version": "synthetic-v1",
+  "label_column": "label",
+  "leakage_note": "'label' and 'match_id' are NOT model inputs; every other column is a feature"
+ },
+ "football": {
+  "file": "football_snapshots.csv",
+  "rows_in_file": 5400,
+  "rows_generated": 57600,
+  "matches_generated": 3200,
+  "full_export": false,
+  "data_hash": "29a382a8c17befec",
+  "seed": 11,
+  "dataset_version": "synthetic-v1",
+  "label_column": "label",
+  "leakage_note": "'label' and 'match_id' are NOT model inputs; every other column is a feature"
+ },
+ "basketball": {
+  "file": "basketball_snapshots.csv",
+  "rows_in_file": 6907,
+  "rows_generated": 59858,
+  "matches_generated": 2600,
+  "full_export": false,
+  "data_hash": "ca6aba238ef95e5a",
+  "seed": 13,
+  "dataset_version": "synthetic-v1",
+  "label_column": "label",
+  "leakage_note": "'label' and 'match_id' are NOT model inputs; every other column is a feature"
+ }
+}
